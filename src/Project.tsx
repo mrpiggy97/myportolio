@@ -11,12 +11,23 @@ export type projectProps = {
 
 export default function Project(props : projectProps) : JSX.Element{
     return(
-        <div className="project">
-            <span>{props.name}</span>
-            <span>{props.description}</span>
-            <span>{props.stack}</span>
-            {props.link ? <span>{props.link}</span> : null}
-            {props.gifURI ? <span>{props.gifURI}</span> : null}
+        <div className="project-container">
+            <div className="project1">
+                <span>{props.name}</span>
+                <span>{props.github}</span>
+                {props.link ? <span>{props.link}</span> : null}
+                <span>{props.stack}</span>
+                <span>{props.description}</span>
+                {props.gifURI ? <span>{props.gifURI}</span> : null}
+            </div>
+            <div className="project2">
+                <span>{props.name}</span>
+                <span>{props.github}</span>
+                {props.link ? <span>{props.link}</span> : null}
+                <span>{props.stack}</span>
+                <span>{props.description}</span>
+                {props.gifURI ? <span>{props.gifURI}</span> : null}
+            </div>
         </div>
     )
 }
