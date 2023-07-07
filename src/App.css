@@ -1,6 +1,6 @@
 div#app{
-  min-height: 100vh;
-  min-width: 100vw;
+  min-height: 150vh;
+  min-width: 95vw;
   background-image: url("./assets/space.jpg");
   background-position: center;
   color: rgba(88, 15, 88, 0.548);
@@ -224,8 +224,11 @@ div.cyberpunk3{
 
 div#projects{
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(2, 40%);
+  grid-template-rows: repeat(3, 33%);
+  grid-area: projects;
+  justify-content:space-around;
+  row-gap: 15px;
 }
 
 canvas.objects{

@@ -85,7 +85,14 @@ function App() {
         </Canvas>
       </div>
       <div id="projects">
-        <span>hello</span>
+        {projects.map((pr) => <Project
+        name={pr.name}
+        link={pr.link}
+        github={pr.github}
+        stack={pr.stack}
+        description={pr.description}
+        gifURI={pr.gifURI}
+        />)}
       </div>
     </div>
   )
