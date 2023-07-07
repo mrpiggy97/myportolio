@@ -21,33 +21,40 @@ div#header{
   align-items: center;
   font-size: xx-large;
 }
+
+div#cyberpunk-container{
+  display: grid;
+  grid-template-columns: 100%;
+}
+
 div.cyberpunk{
   border: 2px solid rgba(241, 5, 135, 0.911);
   box-shadow: 0 0 1rem rgba(241, 5, 135, 0.911);
   background-color: rgb(42, 4, 78);
   padding: 10px;
-  display: grid;
-  grid-template-columns: 100%;
-}
-
-span.cyberpunk{
+  grid-column: 1;
+  grid-row: 1;
   animation: glitch 1s linear infinite;
-  grid-column: 1;
-  grid-row: 1;
 }
 
-span.cyberpunk:nth-child(2){
-  animation: glitch2 1s linear infinite;
-  color: rgb(11, 208, 235);
+div.cyberpunk2{
+  border: 2px solid rgb(11, 208, 235);
+  box-shadow: 0 0 1rem rgb(11, 208, 235);;
+  background-color: rgba(241, 5, 135, 0.911);
+  padding: 10px;
   grid-column: 1;
   grid-row: 1;
+  animation: glitch2 2s linear infinite;
 }
 
-span.cyberpunk:nth-child(3){
-  animation: glitch3 1s linear infinite;
-  color: rgba(241, 5, 135, 0.911);
-  grid-row: 1;
+div.cyberpunk3{
+  border: 2px solid rgb(11, 208, 235);;
+  box-shadow: 0 0 1rem white;
+  background-color: rgba(241, 5, 135, 0.911);
+  padding: 10px;
   grid-column: 1;
+  grid-row: 1;
+  animation: glitch3 3s linear infinite;
 }
 
 @keyframes glitch{

@@ -67,10 +67,16 @@ function App() {
           <Earth/>
           <Moon/>
         </Canvas>
-        <div className='cyberpunk' >
-          <span className='cyberpunk'>FABIAN J RIVAS</span>
-          <span className='cyberpunk'>FABIAN J RIVAS</span>
-          <span className='cyberpunk'>FABIAN J RIVAS</span>
+        <div id="cyberpunk-container">
+          <div className='cyberpunk'>
+            FABIAN J RIVAS
+          </div>
+          <div className='cyberpunk2'>
+            FABIAN J RIVAS
+          </div>
+          <div className='cyberpunk3'>
+            FABIAN J RIVAS
+          </div>
         </div>
         <Canvas className='objects'>
           <ambientLight intensity={1}/>
