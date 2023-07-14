@@ -1,11 +1,11 @@
 div#app{
-  min-height: 200vh;
+  min-height: 250vh;
   min-width: 95vw;
   background-image: url("./assets/space.jpg");
   background-position: center;
   color: rgba(88, 15, 88, 0.548);
   display: grid;
-  grid-template-rows: 30% 70%;
+  grid-template-rows: 20% 80%;
   grid-template-columns: 100%;
   grid-template-areas: "header"
                        "projects";
@@ -18,7 +18,7 @@ div#header{
   grid-template-columns: 30% 40% 30%;
   grid-template-rows: 100%;
   justify-items: center;
-  align-items: center;
+  align-items:start;
   font-size: xx-large;
 }
 
@@ -225,8 +225,9 @@ div.cyberpunk3{
 div#projects{
   display: grid;
   grid-template-columns: repeat(2, 40%);
-  grid-template-rows: repeat(3, 30%);
+  grid-template-rows: repeat(3, 32%);
   grid-area: projects;
+  align-content: baseline;
   justify-content:space-around;
   row-gap: 10px;
 }

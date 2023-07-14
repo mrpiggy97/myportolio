@@ -22,7 +22,7 @@ function App() {
       link: "https://boisterous-cocada-9ea93b.netlify.app/",
       stack: ["Typescript", "React", "Redux", "docker", "Node.js", "netlify"],
       description: "this projects's objective was to make a project that implements Dijkstra's algorithm with animations that show you how the graph grows to find the end node. It was deployed using netlify",
-      gifURI: "./pathfinder.gif"
+      gifURI: "./pathfinder1.gif"
     },
     {
       name: "restClient",

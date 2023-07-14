@@ -41,7 +41,7 @@ div.project2{
 
 div.project3{
   display: grid;
-  grid-template-rows: 10% 10% 10% 10% 30% 30%;
+  grid-template-rows: 5% 10% 10% 5% 30% 35%;
   grid-template-columns: 100%;
   grid-template-areas: "name"
                        "link"
@@ -60,12 +60,67 @@ div.project3{
   z-index: 1;
 }
 
+div.name{
+  display: grid;
+  grid-area: name;
+  align-items: baseline;
+  justify-items: center;
+}
+
+div.link{
+  display: grid;
+  grid-area: link;
+  align-items: center;
+  justify-items: left;
+}
+
+div.github{
+  display: grid;
+  grid-area: github;
+  align-items:center;
+  justify-items: left;
+}
+
+div.stack{
+  display: grid;
+  grid-area: stack;
+  align-items: center;
+  justify-items: left;
+}
+
+div.description{
+  display: grid;
+  grid-area: description;
+  align-items: baseline;
+  justify-items: left;
+}
+
+div.preview{
+  display: grid;
+  grid-area: preview;
+  align-items: center;
+  justify-items: center;
+}
+
+
 div.project3:hover{
   cursor: pointer;
   animation-name: glitchproject2;
   animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
+}
+
+div.description{
+  grid-area: description;
+  align-items:baseline;
+  justify-items: left;
+}
+
+div.preview{
+  grid-area: preview;
+  align-items: center;
+  justify-items: center;
 }
 
 @keyframes glitchproject1{

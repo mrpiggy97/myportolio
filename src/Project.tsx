@@ -17,12 +17,25 @@ export default function Project(props : projectProps) : JSX.Element{
             <div className="project2">
             </div>
             <div className="project3">
-                <span>{props.name}</span>
-                <span>{props.github}</span>
-                {props.link ? <span>{props.link}</span> : null}
-                <span>{props.stack}</span>
-                <span>{props.description}</span>
-                {props.gifURI ? <span>{props.gifURI}</span> : null}
+                <div className="name">
+                    <span>{props.name}</span>
+                </div>
+                <div className="github">
+                    <span>repo: {props.github}</span>
+                </div>
+                <div className="link">
+                    {props.link ? <span>link: {props.link}</span> : null}
+                </div>
+                <div className="stack">
+                    <span>tech stack: {props.stack}</span>
+                </div>
+                <div className="description">
+                    <span>{props.description}</span>
+                </div>
+                <div className="preview">
+                    <span>preview</span>
+                    {props.gifURI ? <img src={props.gifURI} height={"100%"} width={"50%"} /> : null}
+                </div>
             </div>
         </div>
     )
