@@ -28,7 +28,7 @@ export default function Project(props : projectProps) : JSX.Element{
                     {props.link ? <a className="link" target="_blank" href={props.link}>click here to see site</a> : null}
                 </div>
                 <div className="stack">
-                    <span>stack: {props.stack}</span>
+                    <span>Stack: {props.stack}</span>
                 </div>
                 <div className="description">
                     <span>{props.description}.</span>
