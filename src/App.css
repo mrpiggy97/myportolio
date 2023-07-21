@@ -5,7 +5,7 @@ div#app{
   background-position: center;
   color: rgba(88, 15, 88, 0.548);
   display: grid;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 10% 80%;
   grid-template-columns: 100%;
   grid-template-areas: "header"
                        "projects";
@@ -17,9 +17,30 @@ div#header{
   grid-area: header;
   grid-template-columns: 30% 40% 30%;
   grid-template-rows: 100%;
+  grid-template-areas: "planets cyber-header sun";
+  grid-template-rows: 100%;
   justify-items: center;
   align-items:start;
   font-size: xx-large;
+}
+
+div#planets{
+  display: grid;
+  grid-area: planets;
+}
+
+div#cyber-header{
+  display: grid;
+  grid-area: cyber-header;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, 70%);
+  align-items: baseline;
+  justify-items: center;
+}
+
+div#sun{
+  display: grid;
+  grid-area: sun;
 }
 
 div#cyberpunk-container{
@@ -55,6 +76,22 @@ div.cyberpunk3{
   grid-column: 1;
   grid-row: 1;
   animation: glitch3 3s linear infinite;
+}
+
+div.fullstack1{
+  color: white;
+  background-color: #1aef46;
+  font-size: medium;
+}
+
+div.fullstack2{
+  background-color: navy;
+  font-size: medium;
+}
+
+div.fullstack3{
+  background-color: navy;
+  font-size: medium;
 }
 
 @keyframes glitch{
@@ -224,12 +261,66 @@ div.cyberpunk3{
 
 div#projects{
   display: grid;
-  grid-template-columns: repeat(2, 40%);
-  grid-template-rows: repeat(3, 32%);
+  grid-template-columns: repeat(2, 46%);
+  grid-template-rows: 15% 85%;
+  grid-template-areas: "frontend-header backend-header"
+                       "frontend backend";
   grid-area: projects;
+  justify-content: space-around;
   align-content: baseline;
-  justify-content:space-around;
-  row-gap: 10px;
+  column-gap: 20px;
+}
+
+div#frontend-header{
+  display: grid;
+  grid-area: frontend-header;
+  align-items: center;
+  justify-items: center;
+}
+
+div.frontend-header1{
+  background-color: navy;
+}
+
+div.frontend-header2{
+  background-color: rgb(42, 4, 78);
+}
+
+div.frontend-header3{
+  background-color: navy;
+}
+
+div#backend-header{
+  display: grid;
+  grid-area: backend-header;
+  align-items: center;
+  justify-items: center;
+}
+
+div.backend-header1{
+  background-color: rgb(42, 4, 78);
+}
+div.backend-header2{
+  background-color: rgba(241, 5, 135, 0.911);
+}
+div.backend-header3{
+  background-color: rgb(42, 4, 78);
+}
+
+div#frontend{
+  display: grid;
+  grid-area: frontend;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 20%);
+  row-gap: 30px;
+}
+
+div#backend{
+  display: grid;
+  grid-area: backend;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 20%);
+  row-gap: 30px;
 }
 
 canvas.objects{
