@@ -70,6 +70,7 @@ div.name{
   grid-area: name;
   align-items: baseline;
   justify-items: center;
+  font-size: large;
 }
 
 div.links{
