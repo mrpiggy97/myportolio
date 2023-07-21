@@ -11,7 +11,7 @@ export default function Earth() : JSX.Element{
         earthRef.current.rotation.y = a*(-1)
     })
     return(
-        <mesh scale={3} position={[-2.5,0,0]} ref={earthRef}>
+        <mesh scale={1} position={[-1.5,1.8,0]} ref={earthRef}>
             <ambientLight intensity={0.5} />
             <pointLight position={[-10, 0, 0]} intensity={0.5} />
             <sphereGeometry attach="geometry"/>

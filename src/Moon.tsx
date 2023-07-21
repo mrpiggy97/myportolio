@@ -10,7 +10,7 @@ export default function Moon() : JSX.Element{
         moonRef.current.rotation.z = clock.getElapsedTime()/5
     })
     return(
-        <mesh ref={moonRef} position={[3,0,0]} scale={1}>
+        <mesh ref={moonRef} position={[1,2,0]} scale={0.2}>
             <sphereGeometry attach={"geometry"}/>
             <meshStandardMaterial attach={"material"} map={moonMap}/>
         </mesh>

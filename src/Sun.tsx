@@ -10,7 +10,7 @@ export default function Sun() : JSX.Element{
         sunRef.current.rotation.z = clock.getElapsedTime()
     })
     return(
-        <mesh scale={1.5} ref={sunRef} position={[0,0,0]}>
+        <mesh scale={0.2} ref={sunRef} position={[2,2,0]}>
             <sphereGeometry attach={"geometry"}/>
             <meshStandardMaterial attach={"material"} color={"yellow"} map={sunMap}/>
         </mesh>
