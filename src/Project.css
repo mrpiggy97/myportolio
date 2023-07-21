@@ -17,6 +17,7 @@ div.project1{
     grid-column: 1;
     grid-row: 1;
     border: solid 2px white;
+    border-radius: 5px;
     box-shadow: 0 0 1rem white;
     background-color: rgb(42, 4, 78);
     z-index: 0;
@@ -34,6 +35,7 @@ div.project2{
     grid-row: 1;
     grid-column: 1;
     border: solid 2px rgba(241, 5, 135, 0.911);
+    border-radius: 5px;
     box-shadow: 0 0 1rem rgba(241, 5, 135, 0.911);
     background-color: rgba(241, 5, 135, 0.911);
     z-index: 0;
@@ -41,23 +43,26 @@ div.project2{
 
 div.project3{
   display: grid;
-  grid-template-rows: 5% 10% 10% 5% 30% 35%;
-  grid-template-columns: 100%;
-  grid-template-areas: "name"
-                       "link"
-                       "github"
-                       "stack"
-                       "description"
-                       "preview";
+  grid-template-rows: 15% 30% 40% 15%;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: "preview name"
+                       "preview links"
+                       "description description"
+                       "stack stack";
   min-height: 90%;
   min-width: 100%;
-  align-items: center;
   grid-row: 1;
   grid-column: 1;
-  border: solid 2px white;
-  box-shadow: 0 0 1rem white;
-  background-color: rgb(42, 4, 78);
+  border: solid 2px rgb(42, 4, 78);
+  border-radius: 5px;
+  box-shadow: 0 0 1rem rgba(241, 5, 135, 0.911);
+  background-image: linear-gradient(rgb(10, 2, 58),rgb(20, 4, 78),rgb(31, 2, 58),rgb(13, 1, 66),rgb(42, 4, 78));
   z-index: 1;
+  overflow:visible;
+}
+
+div.frontend{
+  background-color: navy;
 }
 
 div.name{
@@ -67,17 +72,10 @@ div.name{
   justify-items: center;
 }
 
-div.link{
+div.links{
   display: grid;
-  grid-area: link;
+  grid-area: links;
   align-items: center;
-  justify-items: left;
-}
-
-div.github{
-  display: grid;
-  grid-area: github;
-  align-items:center;
   justify-items: left;
 }
 
@@ -91,37 +89,23 @@ div.stack{
 div.description{
   display: grid;
   grid-area: description;
-  align-items: baseline;
+  align-items: center;
   justify-items: left;
 }
 
 div.preview{
   display: grid;
   grid-area: preview;
-  align-items: center;
-  justify-items: center;
 }
 
 
 div.project3:hover{
-  cursor: pointer;
   animation-name: glitchproject2;
   animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
 }
 
-div.description{
-  grid-area: description;
-  align-items:baseline;
-  justify-items: left;
-}
-
-div.preview{
-  grid-area: preview;
-  align-items: center;
-  justify-items: center;
-}
 
 @keyframes glitchproject1{
   0% {
@@ -286,4 +270,12 @@ div.preview{
     transform: none;
     opacity: 0.25;
   }
+}
+
+a.link{
+  color: rgb(21, 241, 1);
+}
+
+a.link:active{
+  color: rgb(21, 241, 1);
 }
