@@ -1,11 +1,19 @@
 import './App.css'
 import { Canvas } from '@react-three/fiber'
 import Earth from './Earth'
-import Sun from './Sun'
 import Moon from './Moon'
 import Project, {projectProps} from './Project'
 
 function App() {
+  const openGithub = () => {
+    window.open("https://www.github.com/mrpiggy97", "_blank")
+  }
+  const openLinkedin = () => {
+    window.open("https://www.linkedin.com/in/fabian-jesus-rivas", "_blank")
+  }
+  const openLeetcode = () => {
+    window.open("https://leetcode.com/mrpiggy97")
+  }
   const baseGithubURI = "https://www.github.com/mrpiggy97"
   const frontend : projectProps[] = [
     {
@@ -103,7 +111,7 @@ function App() {
         </div>
         <div id="social-links">
           <div className='github'>
-            <div className='container'>
+            <div className='container' onClick={openGithub}>
               <div className='neon-sign github-sign'>
                 GITHUB
               </div>
@@ -113,7 +121,7 @@ function App() {
             </div>
           </div>
           <div className='linkedin'>
-            <div className='container'>
+            <div className='container' onClick={openLinkedin}>
               <div className='neon-sign linkedin-sign'>
                 LINKEDIN
               </div>
@@ -123,7 +131,7 @@ function App() {
             </div>
           </div>
           <div className='leetcode'>
-            <div className='container'>
+            <div className='container' onClick={openLeetcode}>
               <div className='neon-sign leetcode-sign'>
                 LEETCODE
               </div>

@@ -100,21 +100,27 @@ div.neon-sign2{
 
 div.github-sign{
   background-color: navy;
+  cursor: pointer;
 }
 div.github-sign2{
   background-color: darkblue;
+  cursor: pointer;
 }
 div.linkedin-sign{
   background-color: blue;
+  cursor: pointer;
 }
 div.linkedin-sign2{
   background-color: darkcyan;
+  cursor: pointer;
 }
 div.leetcode-sign{
   background-color: darkorange;
+  cursor: pointer;
 }
 div.leetcode-sign2{
   background-color: darkgoldenrod;
+  cursor: pointer;
 }
 div.number-sign{
   background-color: black;
