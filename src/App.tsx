@@ -101,12 +101,57 @@ function App() {
             </div>
           </div>
         </div>
-        <div id="sun">
-          <Canvas className='objects'>
-            <ambientLight intensity={1}/>
-            <directionalLight position={[6,2,3]} intensity={2}/>
-            <Sun/>
-          </Canvas>
+        <div id="social-links">
+          <div className='github'>
+            <div className='container'>
+              <div className='neon-sign github-sign'>
+                GITHUB
+              </div>
+              <div className='neon-sign2 github-sign2'>
+                GITHUB
+              </div>
+            </div>
+          </div>
+          <div className='linkedin'>
+            <div className='container'>
+              <div className='neon-sign linkedin-sign'>
+                LINKEDIN
+              </div>
+              <div className='neon-sign2 linkedin-sign2'>
+                LINKEDIN
+              </div>
+            </div>
+          </div>
+          <div className='leetcode'>
+            <div className='container'>
+              <div className='neon-sign leetcode-sign'>
+                LEETCODE
+              </div>
+              <div className='neon-sign2 leetcode-sign2'>
+                LEETCODE
+              </div>
+            </div>
+          </div>
+          <div className='number'>
+            <div className='container'>
+                <div className='neon-sign number-sign'>
+                  7866603157
+                </div>
+                <div className='neon-sign2 number-sign2'>
+                  7866603157
+                </div>
+            </div>
+          </div>
+          <div className='email'>
+            <div className='container'>
+              <div className='neon-sign email-sign'>
+                fabyjesusrivas10@gmail.com
+              </div>
+              <div className='neon-sign2 email-sign2'>
+                fabyjesusrivas10@gmail.com
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div id="projects">

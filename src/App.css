@@ -17,10 +17,8 @@ div#header{
   grid-area: header;
   grid-template-columns: 30% 40% 30%;
   grid-template-rows: 100%;
-  grid-template-areas: "planets cyber-header sun";
+  grid-template-areas: "planets cyber-header social-links";
   grid-template-rows: 100%;
-  justify-items: center;
-  align-items:start;
   font-size: xx-large;
 }
 
@@ -38,17 +36,107 @@ div#cyber-header{
   justify-items: center;
 }
 
-div#sun{
+div#social-links{
   display: grid;
-  grid-area: sun;
+  grid-area: social-links;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(2, 50%);
+  grid-template-areas: "github linkedin leetcode"
+                       "number email email";
+  font-size: medium;
+}
+
+div.github{
+  display: grid;
+  grid-area: github;
+  align-items: center;
+  justify-items: center;
+}
+
+div.linkedin{
+  display: grid;
+  grid-area: linkedin;
+}
+div.leetcode{
+  display: grid;
+  grid-area: leetcode;
+}
+div.number{
+  display: grid;
+  grid-area: number;
+}
+div.email{
+  display: grid;
+  grid-area: email;
+}
+
+div.container{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+div.neon-sign{
+  display: grid;
+  border: 2px solid rgba(241, 5, 135, 0.911);
+  box-shadow: 0 0 1rem rgba(241, 5, 135, 0.911);
+  padding: 10px;
+  grid-column: 1;
+  grid-row: 1;
+  animation: glitch 1s linear infinite;
+}
+
+div.neon-sign2{
+  display: grid;
+  border: 2px solid rgb(11, 208, 235);
+  box-shadow: 0 0 1rem rgb(11, 208, 235);;
+  padding: 10px;
+  grid-column: 1;
+  grid-row: 1;
+  animation: glitch2 2s linear infinite;
+}
+
+div.github-sign{
+  background-color: navy;
+}
+div.github-sign2{
+  background-color: darkblue;
+}
+div.linkedin-sign{
+  background-color: blue;
+}
+div.linkedin-sign2{
+  background-color: darkcyan;
+}
+div.leetcode-sign{
+  background-color: darkorange;
+}
+div.leetcode-sign2{
+  background-color: darkgoldenrod;
+}
+div.number-sign{
+  background-color: black;
+}
+div.number-sign2{
+  background-color: darkgray;
+}
+div.email-sign{
+  background-color: darkgreen;
+}
+div.email-sign2{
+  background-color: navy;
 }
 
 div#cyberpunk-container{
   display: grid;
   grid-template-columns: 100%;
+  grid-template-rows: 100%;
 }
 
 div.cyberpunk{
+  display: grid;
   border: 2px solid rgba(241, 5, 135, 0.911);
   box-shadow: 0 0 1rem rgba(241, 5, 135, 0.911);
   background-color: rgb(42, 4, 78);
@@ -59,6 +147,7 @@ div.cyberpunk{
 }
 
 div.cyberpunk2{
+  display: grid;
   border: 2px solid rgb(11, 208, 235);
   box-shadow: 0 0 1rem rgb(11, 208, 235);;
   background-color: rgba(241, 5, 135, 0.911);
