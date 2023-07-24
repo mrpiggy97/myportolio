@@ -12,14 +12,35 @@ div#app{
   color: rgb(11, 208, 235);
 }
 
+@media  screen and (max-width: 700px) {
+  div#app{
+    min-height: 350vh;
+    max-width: 100%;
+    grid-template-rows: 20% 80%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+  }
+}
+
 div#header{
   display: grid;
   grid-area: header;
   grid-template-columns: 30% 40% 30%;
   grid-template-rows: 100%;
   grid-template-areas: "planets cyber-header social-links";
-  grid-template-rows: 100%;
   font-size: xx-large;
+}
+
+@media screen and (max-width: 700px){
+  div#header{
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 33%);
+    grid-template-areas: "cyber-header"
+                         "social-links"
+                         "planets";
+  }
 }
 
 div#planets{
@@ -31,7 +52,7 @@ div#cyber-header{
   display: grid;
   grid-area: cyber-header;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(2, 70%);
+  grid-template-rows: repeat(2, 50%);
   align-items: baseline;
   justify-items: center;
 }
@@ -366,6 +387,18 @@ div#projects{
   column-gap: 20px;
 }
 
+@media screen and (max-width: 700px){
+  div#projects{
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 35% 15% 35%;
+    grid-template-areas: "frontend-header"
+                         "frontend"
+                         "backend-header"
+                         "backend";
+    column-gap: 0;
+  }
+}
+
 div#frontend-header{
   display: grid;
   grid-area: frontend-header;
@@ -410,12 +443,22 @@ div#frontend{
   row-gap: 30px;
 }
 
+
 div#backend{
   display: grid;
   grid-area: backend;
   grid-template-columns: 100%;
   grid-template-rows: repeat(4, 20%);
   row-gap: 30px;
+}
+
+@media screen and (max-width: 700px){
+  div#frontend{
+    row-gap: 60px;
+  }
+  div#backend{
+    row-gap: 120px;
+  }
 }
 
 canvas.objects{
