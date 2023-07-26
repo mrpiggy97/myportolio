@@ -27,14 +27,14 @@ export default function Project(props : projectProps) : JSX.Element{
                     <a className="link" target="_blank" href={props.github}>click here to see github repo</a>
                     {props.link ? <a className="link" target="_blank" href={props.link}>click here to see site</a> : null}
                 </div>
-                <div className="stack">
-                    <span>Stack: {props.stack}</span>
-                </div>
                 <div className="description">
                     <span>{props.description}.</span>
                 </div>
                 <div className="preview">
-                    {props.gifURI ? <img src={props.gifURI} height={"100%"} width={"95%"} /> : null}
+                    {props.gifURI ? <img src={props.gifURI} height={"90%"} width={"60%"} /> : null}
+                </div>
+                <div className="stack">
+                    <span>Stack: {props.stack}</span>
                 </div>
             </div>
         </div>

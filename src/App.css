@@ -5,7 +5,7 @@ div#app{
   background-position: center;
   color: rgba(88, 15, 88, 0.548);
   display: grid;
-  grid-template-rows: 10% 80%;
+  grid-template-rows: 10% 90%;
   grid-template-columns: 100%;
   grid-template-areas: "header"
                        "projects";
@@ -14,9 +14,8 @@ div#app{
 
 @media  screen and (max-width: 700px) {
   div#app{
-    min-height: 350vh;
+    min-height: 800vh;
     max-width: 100%;
-    grid-template-rows: 20% 80%;
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -390,7 +389,7 @@ div#projects{
 @media screen and (max-width: 700px){
   div#projects{
     grid-template-columns: 100%;
-    grid-template-rows: 15% 35% 15% 35%;
+    grid-template-rows: 10% 40% 10% 40%;
     grid-template-areas: "frontend-header"
                          "frontend"
                          "backend-header"
@@ -438,7 +437,9 @@ div.backend-header3{
 div#frontend{
   display: grid;
   grid-area: frontend;
-  grid-template-columns: 100%;
+  grid-template-columns: 80%;
+  justify-content: center;
+  justify-self: baseline;
   grid-template-rows: repeat(4, 20%);
   row-gap: 30px;
 }
@@ -447,7 +448,8 @@ div#frontend{
 div#backend{
   display: grid;
   grid-area: backend;
-  grid-template-columns: 100%;
+  grid-template-columns: 80%;
+  justify-content: center;
   grid-template-rows: repeat(4, 20%);
   row-gap: 30px;
 }
