@@ -1,7 +1,7 @@
 import { useLoader, useFrame } from "@react-three/fiber"
 import { Mesh, TextureLoader, Vector3 } from "three"
 import earthTexture from "./assets/dayearth10k.jpg"
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 
 export default function Earth() : JSX.Element{
     const earthMap = useLoader(TextureLoader, earthTexture)
