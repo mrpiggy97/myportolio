@@ -73,7 +73,7 @@ function App() {
       frontend: false
     },
   ]
-
+  console.log(window.innerWidth)
   return (
     <div id="app">
       <div id="header">

@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react"
 export default function Earth() : JSX.Element{
     const earthMap = useLoader(TextureLoader, earthTexture)
     const earthRef = useRef<Mesh>(null!)
-    const pos : number[] = window.innerWidth > 700 ? [1.5,1,0] : [0,0,0]
+    const pos : number[] = window.innerWidth > 700 ? [-1,1,0] : [0,0,0]
     const positioning : Vector3 = new Vector3(...pos)
     useFrame(({clock}) => {
         const a = clock.getElapsedTime()/2

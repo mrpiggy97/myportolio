@@ -43,12 +43,13 @@ div.project2{
 
 div.project3{
   display: grid;
-  grid-template-rows: 15% 30% 40% 15%;
-  grid-template-columns: 25% 75%;
-  grid-template-areas: "preview name"
-                       "preview links"
-                       "description description"
-                       "stack stack";
+  grid-template-rows: 10% 10% 30% 40% 10%;
+  grid-template-columns: 100%;
+  grid-template-areas: "name"
+                       "links"
+                       "description"
+                       "preview"
+                       "stack";
   min-height: 90%;
   min-width: 100%;
   grid-row: 1;
@@ -59,24 +60,6 @@ div.project3{
   background-image: linear-gradient(rgb(10, 2, 58),rgb(20, 4, 78),rgb(31, 2, 58),rgb(13, 1, 66),rgb(42, 4, 78));
   z-index: 1;
   overflow:visible;
-}
-
-@media screen and (max-width: 700px){
-  div.project3{
-    grid-template-columns: 100%;
-    grid-template-rows: 15% 15% 30% 30% 10%;
-    grid-template-areas: "name"
-                         "links"
-                         "description"
-                         "preview"
-                         "stack";
-  }
-  div.links{
-    justify-items: auto;
-  }
-  div.preview{
-    justify-items: center;
-  }
 }
 
 div.frontend{
@@ -95,7 +78,13 @@ div.links{
   display: grid;
   grid-area: links;
   align-items: center;
-  justify-items: left;
+  justify-items: center;
+}
+
+@media screen and (min-width: 700px){
+  div.links{
+    justify-items: left;
+  }
 }
 
 div.stack{
@@ -115,6 +104,8 @@ div.description{
 div.preview{
   display: grid;
   grid-area: preview;
+  justify-items: center;
+  align-items: baseline;
 }
 
 

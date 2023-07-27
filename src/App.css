@@ -1,45 +1,58 @@
 div#app{
-  min-height: 250vh;
-  min-width: 95vw;
+  min-height: 1500vh;
+  min-width: 100vw;
   background-image: url("./assets/space.jpg");
   background-position: center;
+  background-size: cover;
   color: rgba(88, 15, 88, 0.548);
   display: grid;
-  grid-template-rows: 10% 90%;
   grid-template-columns: 100%;
+  grid-template-rows: 10% 90%;
   grid-template-areas: "header"
                        "projects";
   color: rgb(11, 208, 235);
 }
 
-@media  screen and (max-width: 700px) {
+@media screen and (min-width: 701px){
   div#app{
-    min-height: 1000vh;
-    max-width: 100%;
+    min-height: 800vh;
+    min-width: 99vw;
+    grid-template-rows: 15% 85%;
+  }
+}
+
+@media screen and (min-width: 1082px) {
+  div#app{
+    min-height: 600vh;
+    max-width: 99vw;
     background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
+    grid-template-rows: 10% 90%;
+  }
+}
+
+@media screen and (min-width: 1220px){
+  div#app{
+    min-width: 99vw;
+    min-height: 350vh;
   }
 }
 
 div#header{
   display: grid;
   grid-area: header;
-  grid-template-columns: 30% 40% 30%;
-  grid-template-rows: 100%;
-  grid-template-areas: "planets cyber-header social-links";
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 33%);
+  grid-template-areas: "cyber-header"
+                       "social-links"
+                       "planets";
   font-size: xx-large;
 }
 
-
-@media screen and (max-width: 700px){
+@media screen and (min-width: 1082px){
   div#header{
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 33%);
-    grid-template-areas: "cyber-header"
-                         "social-links"
-                         "planets";
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 100%;
+    grid-template-areas: "planets cyber-header social-links";
   }
 }
 
@@ -377,14 +390,19 @@ div.fullstack3{
 
 div#projects{
   display: grid;
-  grid-template-columns: repeat(2, 46%);
-  grid-template-rows: 15% 85%;
-  grid-template-areas: "frontend-header backend-header"
-                       "frontend backend";
-  grid-area: projects;
-  justify-content: space-around;
-  align-content: baseline;
-  column-gap: 20px;
+}
+
+@media screen and (max-width: 2000px){
+  div#projects{
+    grid-template-columns: repeat(2, 46%);
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "frontend-header backend-header"
+                         "frontend backend";
+    grid-area: projects;
+    justify-content: space-around;
+    align-content: baseline;
+    column-gap: 20px;
+  }
 }
 
 @media screen and (max-width: 700px){
