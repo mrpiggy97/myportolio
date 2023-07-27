@@ -14,7 +14,7 @@ div#app{
 
 @media  screen and (max-width: 700px) {
   div#app{
-    min-height: 800vh;
+    min-height: 1000vh;
     max-width: 100%;
     background-size:cover;
     background-repeat: no-repeat;
@@ -31,6 +31,7 @@ div#header{
   grid-template-areas: "planets cyber-header social-links";
   font-size: xx-large;
 }
+
 
 @media screen and (max-width: 700px){
   div#header{
