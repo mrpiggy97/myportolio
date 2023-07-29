@@ -390,9 +390,14 @@ div.fullstack3{
 
 div#projects{
   display: grid;
+  grid-template-rows: 10% 40% 10% 40%;
+  grid-template-areas: "frontend-header"
+                       "frontend"
+                       "backend-header"
+                       "backend";
 }
 
-@media screen and (max-width: 2000px){
+@media screen and (min-width: 700px){
   div#projects{
     grid-template-columns: repeat(2, 46%);
     grid-template-rows: 15% 85%;
@@ -402,18 +407,6 @@ div#projects{
     justify-content: space-around;
     align-content: baseline;
     column-gap: 20px;
-  }
-}
-
-@media screen and (max-width: 700px){
-  div#projects{
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 40% 10% 40%;
-    grid-template-areas: "frontend-header"
-                         "frontend"
-                         "backend-header"
-                         "backend";
-    column-gap: 0;
   }
 }
 
@@ -473,7 +466,7 @@ div#backend{
   row-gap: 30px;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (min-width: 700px){
   div#frontend{
     row-gap: 60px;
   }
