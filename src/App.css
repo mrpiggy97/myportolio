@@ -1,5 +1,5 @@
 div#app{
-  min-height: 1500vh;
+  min-height: 1300vh;
   min-width: 100vw;
   background-image: url("./assets/space.jpg");
   background-position: center;
@@ -390,7 +390,7 @@ div.fullstack3{
 
 div#projects{
   display: grid;
-  grid-template-rows: 10% 40% 10% 40%;
+  grid-template-rows: 5% 45% 5% 45%;
   grid-template-areas: "frontend-header"
                        "frontend"
                        "backend-header"
@@ -432,7 +432,7 @@ div.frontend-header3{
 div#backend-header{
   display: grid;
   grid-area: backend-header;
-  align-items: center;
+  align-items: baseline;
   justify-items: center;
 }
 
@@ -451,9 +451,10 @@ div#frontend{
   grid-area: frontend;
   grid-template-columns: 80%;
   justify-content: center;
-  justify-self: baseline;
+  align-content: baseline;
+  align-items: baseline;
   grid-template-rows: repeat(4, 20%);
-  row-gap: 30px;
+  row-gap: 100px;
 }
 
 
