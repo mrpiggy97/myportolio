@@ -390,6 +390,7 @@ div.fullstack3{
 
 div#projects{
   display: grid;
+  grid-area: projects;
   grid-template-rows: 5% 45% 5% 45%;
   grid-template-areas: "frontend-header"
                        "frontend"
@@ -403,9 +404,7 @@ div#projects{
     grid-template-rows: 15% 85%;
     grid-template-areas: "frontend-header backend-header"
                          "frontend backend";
-    grid-area: projects;
     justify-content: space-around;
-    align-content: baseline;
     column-gap: 20px;
   }
 }
@@ -432,7 +431,7 @@ div.frontend-header3{
 div#backend-header{
   display: grid;
   grid-area: backend-header;
-  align-items: baseline;
+  align-items: center;
   justify-items: center;
 }
 
@@ -472,7 +471,7 @@ div#backend{
     row-gap: 60px;
   }
   div#backend{
-    row-gap: 120px;
+    row-gap: 60px;
   }
 }
 
