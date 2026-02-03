@@ -6,31 +6,39 @@ import { useState } from 'react'
 
 function ShowProjects() : JSX.Element{
   const [showProjects, setShowProjects] = useState(true)
+  const [selected, setProjectSelected] = useState("")
   const toggleShowProjects = () => {
     setShowProjects(!showProjects)
+  }
+  const setSelected = (projectName : string) => {
+    if(projectName === selected){
+      setProjectSelected("")
+    }else{
+      setProjectSelected(projectName)
+    }
   }
   return (
     <div className='projects-directories'>
       <p>
         <FontAwesomeIcon icon={faHandshake}/> Home
       </p>
-      <p onClick={toggleShowProjects}>
+      <p onClick={toggleShowProjects} className='show-projects'>
         {showProjects ?  <FontAwesomeIcon icon={faArrowDown}/> : <FontAwesomeIcon icon={faArrowRight}/>}
         <FontAwesomeIcon icon={faList}/> Projects
       </p>
       {
         showProjects
         ? <blockquote>
-            <p>
+            <p className={selected === "devhttp" ? "project selected" : "project"} onClick={() => setSelected("devhttp")}>
               <FontAwesomeIcon icon={faCode}/> devhttp
             </p>
-            <p>
+            <p className={selected === "space-simulation" ? "project selected" : "project"} onClick={() => setSelected("space-simulation")}>
               <FontAwesomeIcon icon={faCode}/> space-simulation
             </p>
-            <p>
+            <p className={selected === "piggyhttp" ? "project selected" : "project"} onClick={() => setSelected("piggyhttp")}>
               <FontAwesomeIcon icon={faCode}/> piggyhttp
             </p>
-            <p>
+            <p className={selected === "pathfinder" ? "project selected" : "project"} onClick={() => setSelected("pathfinder")}>
               <FontAwesomeIcon icon={faCode}/> pathfinder
             </p>
           </blockquote>

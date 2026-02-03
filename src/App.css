@@ -110,6 +110,7 @@ div.projects-source{
   grid-area: projects-source;
   grid-template-columns: repeat(3, 33%);
   grid-template-rows: 100%;
+  cursor: pointer;
 }
 div.projects-directories{
   display: grid;
@@ -122,4 +123,20 @@ div.projects-directories{
 blockquote{
   display: grid;
   align-items: baseline;
+}
+
+p.show-projects{
+  cursor: pointer;
+}
+
+p.project{
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 1px transparent;
+  padding: 5px;
+}
+p.selected{
+  background-color: rgb(1, 1, 36);
+  border: solid 1px rgb(1, 1, 36);
+  padding: 5px;
 }
