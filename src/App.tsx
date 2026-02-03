@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngular, faDocker, faGithub, faGitlab, faGolang, faJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faAngular, faConnectdevelop, faDocker, faGithub, faGitlab, faGolang, faJs, faLinkedin, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import './App.css'
-import { faDatabase } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faDatabase, faH, faHandshake, faHSquare, faLink, faNetworkWired, faW } from '@fortawesome/free-solid-svg-icons'
 function App() : JSX.Element {
   return(
     <div id='app'>
@@ -11,7 +11,27 @@ function App() : JSX.Element {
       </header>
 
       <div id='app-menu'>
-        side menu
+        <div id='my-links'>
+            <p>FJR</p>
+            <a href='https://www.linkedin.com/in/fabian-jesus-rivas' target='_blank'>
+              <FontAwesomeIcon icon={faLinkedin} className='large-icon'/>
+            </a>
+            <a href='https://www.github.com/mrpiggy97' target='_blank'>
+              <FontAwesomeIcon icon={faGithub} className='large-icon'/>
+            </a>
+            <a href='https://www.gitlab.com/frivas6' target='_blank'>
+              <FontAwesomeIcon icon={faGitlab} className='large-icon'/>
+            </a>
+            <a href='https://app.joinhandshake.com/profiles/fabian-jesus-rivas' target='_blank'>
+              <FontAwesomeIcon icon={faHSquare} className='large-icon'/>
+            </a>
+            <a href='https://www.leetcode.com/mrpiggy97' target='_blank'>
+              <FontAwesomeIcon icon={faCode} className='large-icon'/>
+            </a>
+        </div>
+        <div id='project-navigation'>
+
+        </div>
       </div>
 
       <div id='views'>
