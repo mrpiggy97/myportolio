@@ -12,7 +12,7 @@ div#app{
   grid-template-areas:   "app-header app-header"
                          "app-menu views"
                          "app-footer app-footer";
-  color: silver;
+  color:#00FF9C;
 }
 
 header#app-header{
@@ -46,7 +46,10 @@ div#my-links{
 }
 div#project-navigation{
   display: grid;
-  grid-area: project-navitation;
+  font-size: small;
+  grid-area: project-navigation;
+  grid-template-columns: 100%;
+  grid-template-rows: 5% 5% 90%;
 }
 
 div#views{
@@ -78,4 +81,45 @@ p.handshake{
 
 a{
   color: #00FF9C;
+}
+
+div.navigation-header{
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background-color: rgb(1, 37, 15);
+  border: solid 1px #00FF9C;
+}
+
+div.explorer{
+  display: grid;
+  justify-items: center;
+}
+
+div.projects{
+  display: grid;
+  grid-template-rows: 3% 50% 47%;
+  grid-template-columns: 10% 10% 80%;
+  grid-template-areas:  "projects-source projects-source ."
+                        ". projects-directory projects-directory"
+                        ". . .";
+}
+
+div.projects-source{
+  display: grid;
+  grid-area: projects-source;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: 100%;
+}
+div.projects-directories{
+  display: grid;
+  grid-area: projects-directory;
+  align-items: baseline;
+  align-content: baseline;
+  grid-template-rows: repeat(5, 10%);
+}
+
+blockquote{
+  display: grid;
+  align-items: baseline;
 }
