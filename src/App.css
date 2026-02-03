@@ -133,10 +133,10 @@ p.project{
   cursor: pointer;
   background-color: transparent;
   border: solid 1px transparent;
-  padding: 5px;
+  padding: 0px;
 }
 p.selected{
   background-color: rgb(1, 1, 36);
   border: solid 1px rgb(1, 1, 36);
-  padding: 5px;
+  padding: 0px;
 }

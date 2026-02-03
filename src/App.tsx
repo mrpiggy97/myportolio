@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngular, faDocker, faGithub, faGitlab, faGolang, faJs, faLinkedin, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import './App.css'
 import { faArrowDown, faArrowRight, faCode, faDatabase, faHandshake, faHSquare, faList,faSearch} from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 function ShowProjects() : JSX.Element{
   const [showProjects, setShowProjects] = useState(true)
@@ -19,7 +19,7 @@ function ShowProjects() : JSX.Element{
   }
   return (
     <div className='projects-directories'>
-      <p>
+      <p className={selected === "home" ? "project selected" : "project"} onClick={() => setSelected("home")}>
         <FontAwesomeIcon icon={faHandshake}/> Home
       </p>
       <p onClick={toggleShowProjects} className='show-projects'>
@@ -28,7 +28,7 @@ function ShowProjects() : JSX.Element{
       </p>
       {
         showProjects
-        ? <blockquote>
+        ? <React.Fragment>
             <p className={selected === "devhttp" ? "project selected" : "project"} onClick={() => setSelected("devhttp")}>
               <FontAwesomeIcon icon={faCode}/> devhttp
             </p>
@@ -41,7 +41,7 @@ function ShowProjects() : JSX.Element{
             <p className={selected === "pathfinder" ? "project selected" : "project"} onClick={() => setSelected("pathfinder")}>
               <FontAwesomeIcon icon={faCode}/> pathfinder
             </p>
-          </blockquote>
+          </React.Fragment>
         : null
       }
     </div>
