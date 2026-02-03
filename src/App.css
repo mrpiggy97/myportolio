@@ -7,7 +7,7 @@ div#app{
   min-height: 120vh;
   min-width: 98vw;
   font-family: sans-serif;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 28% 72%;
   grid-template-rows: 5% 92% 3%;
   grid-template-areas:   "app-header app-header"
                          "app-menu views"
