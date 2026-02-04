@@ -1,7 +1,9 @@
 export default function Home() : JSX.Element{
     return(
-        <div>
-            <p>Home view</p>
+        <div id="home">
+            <div id="greeting-box">
+                <h1>Hello, I am Fabian</h1>
+            </div>
         </div>
     )
 }

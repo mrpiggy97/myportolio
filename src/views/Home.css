@@ -1,0 +1,10 @@
+div#home{
+    display: grid;
+    align-items: baseline;
+    justify-items: center;
+    align-content: baseline;
+    justify-content: center;
+}
+
+div#greeting-box{
+}
