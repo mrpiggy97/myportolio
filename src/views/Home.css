@@ -1,15 +1,26 @@
 div#home{
     display: grid;
-    align-items: baseline;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 35% 50%;
     justify-items: center;
-    align-content: baseline;
-    justify-content: center;
-    font-family: "Robo Mono";
+    color: rgb(0, 255, 65);
+    font-family: "Roboto Mono";
+}
+
+div#projects-preview{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 100%;
+    justify-self: stretch;
+    column-gap: 15px;
+}
+
+div#information{
+    display: grid;
 }
 
 div#greeting-box{
-    color: rgb(0, 255, 65);
-    font-family: "Roboto Mono";
+    display: grid;
 }
 
 div#greeting-box h1 {

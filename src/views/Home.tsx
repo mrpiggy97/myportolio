@@ -1,3 +1,4 @@
+import { Link } from "react-router"
 import "./Home.css"
 import { useEffect, useState } from "react"
 
@@ -36,6 +37,13 @@ export default function Home() : JSX.Element{
         <div id="home">
             <div id="greeting-box">
                 <h1>{displayText}</h1>
+            </div>
+            <div id="projects-preview">
+                <img src="./public/space-simulation.gif" width={"250px"} height={"150px"} alt="" />
+                <img src="./public/pathfinder1.gif" width={"250px"} height={"150px"} alt=""/>
+            </div>
+            <div id="information">
+
             </div>
         </div>
     )
