@@ -6,6 +6,9 @@ import React, { useState } from 'react'
 import {Routes, Route, useNavigate, useLocation} from "react-router"
 import Home from './views/Home'
 import DevHttp from './views/DevHttp'
+import SpaceSimulation from './views/SpaceSimulation'
+import PiggyHttp from './views/PiggyHttp'
+import PathFinder from './views/PathFinder'
 
 function ShowProjects() : JSX.Element{
   const [showProjects, setShowProjects] = useState(true)
@@ -103,6 +106,9 @@ function App() : JSX.Element {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/devhttp' element={<DevHttp/>}/>
+          <Route path='/space-simulation' element={<SpaceSimulation/>}/>
+          <Route path='/piggyhttp' element={<PiggyHttp/>} />
+          <Route path='/pathfinder' element={<PathFinder/>} />
         </Routes>
       </div>
 
