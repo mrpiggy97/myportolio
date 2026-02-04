@@ -3,23 +3,25 @@ import { faAngular, faDocker, faGithub, faGitlab, faGolang, faJs, faLinkedin, fa
 import './App.css'
 import { faArrowDown, faArrowRight, faCode, faDatabase, faHandshake, faHSquare, faList,faSearch} from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
+import {Routes, Route, useNavigate, useLocation} from "react-router"
+import Home from './views/Home'
+import DevHttp from './views/DevHttp'
 
 function ShowProjects() : JSX.Element{
   const [showProjects, setShowProjects] = useState(true)
-  const [selected, setProjectSelected] = useState("")
+  const navigator = useNavigate()
+  const location = useLocation()
   const toggleShowProjects = () => {
     setShowProjects(!showProjects)
   }
-  const setSelected = (projectName : string) => {
-    if(projectName === selected){
-      setProjectSelected("")
-    }else{
-      setProjectSelected(projectName)
+  const goTo = (path : string) => {
+    if(location.pathname !== path){
+      navigator(path)
     }
   }
   return (
     <div className='projects-directories'>
-      <p className={selected === "home" ? "project selected" : "project"} onClick={() => setSelected("home")}>
+      <p className={location.pathname === "/" ? "project selected" : "project"} onClick={() => goTo("/")}>
         <FontAwesomeIcon icon={faHandshake}/> Home
       </p>
       <p onClick={toggleShowProjects} className='show-projects'>
@@ -29,16 +31,16 @@ function ShowProjects() : JSX.Element{
       {
         showProjects
         ? <React.Fragment>
-            <p className={selected === "devhttp" ? "project selected" : "project"} onClick={() => setSelected("devhttp")}>
+            <p className={location.pathname === "/devhttp" ? "project selected" : "project"} onClick={() => goTo("/devhttp")}>
               <FontAwesomeIcon icon={faCode}/> devhttp
             </p>
-            <p className={selected === "space-simulation" ? "project selected" : "project"} onClick={() => setSelected("space-simulation")}>
+            <p className={location.pathname === "/space-simulation" ? "project selected" : "project"} onClick={() => goTo("/space-simulation")}>
               <FontAwesomeIcon icon={faCode}/> space-simulation
             </p>
-            <p className={selected === "piggyhttp" ? "project selected" : "project"} onClick={() => setSelected("piggyhttp")}>
+            <p className={location.pathname === "/piggyhttp" ? "project selected" : "project"} onClick={() => goTo("/piggyhttp")}>
               <FontAwesomeIcon icon={faCode}/> piggyhttp
             </p>
-            <p className={selected === "pathfinder" ? "project selected" : "project"} onClick={() => setSelected("pathfinder")}>
+            <p className={location.pathname === "/pathfinder" ? "project selected" : "project"} onClick={() => goTo("/pathfinder")}>
               <FontAwesomeIcon icon={faCode}/> pathfinder
             </p>
           </React.Fragment>
@@ -98,7 +100,10 @@ function App() : JSX.Element {
       </div>
 
       <div id='views'>
-        views go here
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/devhttp' element={<DevHttp/>}/>
+        </Routes>
       </div>
 
       <footer id='app-footer'>
