@@ -6,7 +6,7 @@ export default function Home() : JSX.Element{
 
     useEffect(() => {
         const japaneseChars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01"
-        const text = "Hello, I am Fabian"
+        const text = "Welcome to my portfolio"
         
         const startAnimation = () => {
             let iteration = 0
