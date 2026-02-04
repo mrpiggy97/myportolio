@@ -4,7 +4,30 @@ div#home{
     justify-items: center;
     align-content: baseline;
     justify-content: center;
+    font-family: "Robo Mono";
 }
 
 div#greeting-box{
+    color: rgb(0, 255, 65);
+    font-family: "Roboto Mono";
+}
+
+div#greeting-box h1 {
+    margin: 0;
+}
+
+@keyframes matrixGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 255, 65, 0.8),
+                     0 0 20px rgba(0, 255, 65, 0.6);
+        box-shadow: 0 0 10px rgba(0, 255, 65, 0.5),
+                    inset 0 0 10px rgba(0, 255, 65, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(0, 255, 65, 1),
+                     0 0 30px rgba(0, 255, 65, 0.8),
+                     0 0 40px rgba(0, 255, 65, 0.6);
+        box-shadow: 0 0 15px rgba(0, 255, 65, 0.8),
+                    inset 0 0 15px rgba(0, 255, 65, 0.3);
+    }
 }
