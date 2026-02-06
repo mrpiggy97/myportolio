@@ -9,6 +9,7 @@ export default function Education(props: {school : string, name: string, date: s
             <p>{props.school}</p>
             <p>{props.name}</p>
             <FontAwesomeIcon icon={faGraduationCap}/>
+            <p>Fabian Jesus Rivas</p>
             <p>{props.date}</p>
             <FontAwesomeIcon icon={faCertificate}/>
         </div>

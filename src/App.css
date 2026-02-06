@@ -61,7 +61,7 @@ div#views{
 footer#app-footer{
   display: grid;
   grid-area: app-footer;
-  grid-template-columns: repeat(10, 10%);
+  grid-template-columns: 100%;
   justify-items: center;
   align-items: center;
   background-color: rgb(1, 37, 15);

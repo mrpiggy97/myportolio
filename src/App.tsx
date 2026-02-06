@@ -113,16 +113,7 @@ function App() : JSX.Element {
       </div>
 
       <footer id='app-footer'>
-        <FontAwesomeIcon icon={faGolang}/>
-        <FontAwesomeIcon icon={faPython}/>
-        <FontAwesomeIcon icon={faJs}/>
-        <small>Ts</small>
-        <FontAwesomeIcon icon={faReact}/>
-        <FontAwesomeIcon icon={faAngular}/>
-        <FontAwesomeIcon icon={faGithub}/>
-        <FontAwesomeIcon icon={faGitlab} />
-        <FontAwesomeIcon icon={faDocker}/>
-        <FontAwesomeIcon icon={faDatabase}/>
+        <small>Contact me at fabyjesusrivas10@gmail.com</small>
       </footer>
     </div>
   )

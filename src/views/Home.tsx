@@ -1,8 +1,9 @@
-import { Link } from "react-router"
 import "./Home.css"
 import { useEffect, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCertificate, faSchool, faUniversity } from "@fortawesome/free-solid-svg-icons"
+import { faAngular, faDocker, faGithub, faGitlab, faGolang, faJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faDatabase } from "@fortawesome/free-solid-svg-icons"
+
 import Education from "../components/Education"
 
 export default function Home() : JSX.Element{
@@ -42,16 +43,28 @@ export default function Home() : JSX.Element{
                 <h1>{displayText}</h1>
             </div>
             <div id="projects-preview">
-                <img src="./space-simulation.gif" width={"80%"} height={"50%"} alt="" />
-                <img src="./pathfinder1.gif" width={"80%"} height={"50%"} alt=""/>
-                <img src="/devhttp1.gif" width={"80%"} height={"50%"} alt=""/>
-                <img src="/piggyhttp1.gif" width={"80%"} height={"50%"} alt=""/>
+                <img className="preview" src="./space-simulation.gif" width={"80%"} height={"50%"} alt="" />
+                <img className="preview" src="./pathfinder1.gif" width={"80%"} height={"50%"} alt=""/>
+                <img className="preview" src="/devhttp1.gif" width={"80%"} height={"50%"} alt=""/>
+                <img className="preview" src="/piggyhttp1.gif" width={"80%"} height={"50%"} alt=""/>
             </div>
             <div id="information">
                 <section className="greeting">
                     <h2>
                         I am a software Engineer that loves to build cool-looking products.
-                    </h2>                    
+                    </h2>
+                </section>
+                <section className="stack">
+                    <FontAwesomeIcon icon={faGolang}/>
+                    <FontAwesomeIcon icon={faPython}/>
+                    <FontAwesomeIcon icon={faJs}/>
+                    <small>Ts</small>
+                    <FontAwesomeIcon icon={faReact}/>
+                    <FontAwesomeIcon icon={faAngular}/>
+                    <FontAwesomeIcon icon={faGithub}/>
+                    <FontAwesomeIcon icon={faGitlab} />
+                    <FontAwesomeIcon icon={faDocker}/>
+                    <FontAwesomeIcon icon={faDatabase}/>
                 </section>
                 <section className="education">
                     <Education school="Western Governors University" name="Bachelor of Science in Software Engineering" date="November 2026"/>
