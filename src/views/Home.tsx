@@ -5,9 +5,19 @@ import { faAngular, faDocker, faGithub, faGitlab, faGolang, faJs, faPython, faRe
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 
 import Education from "../components/Education"
+import { useNavigate } from "react-router"
 
 export default function Home() : JSX.Element{
     const [displayText, setDisplayText] = useState("Hello, I am Fabian")
+    const [hoveredProject, setHoveredProject] = useState<string | null>(null)
+    const navigator = useNavigate()
+
+    const projects = [
+        { id: 'space', name: 'space-simulation', src: './space-simulation.gif' },
+        { id: 'pathfinder', name: 'pathfinder', src: './pathfinder1.gif' },
+        { id: 'devhttp', name: 'devhttp', src: '/devhttp1.gif' },
+        { id: 'piggyhttp', name: 'piggyhttp', src: '/piggyhttp1.gif' }
+    ]
 
     useEffect(() => {
         const japaneseChars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01"
@@ -43,10 +53,22 @@ export default function Home() : JSX.Element{
                 <h1>{displayText}</h1>
             </div>
             <div id="projects-preview">
-                <img className="preview" src="./space-simulation.gif" width={"80%"} height={"50%"} alt="" />
-                <img className="preview" src="./pathfinder1.gif" width={"80%"} height={"50%"} alt=""/>
-                <img className="preview" src="/devhttp1.gif" width={"80%"} height={"50%"} alt=""/>
-                <img className="preview" src="/piggyhttp1.gif" width={"80%"} height={"50%"} alt=""/>
+                {projects.map((project) => (
+                    <div
+                        key={project.id}
+                        className="project-container"
+                        onMouseEnter={() => setHoveredProject(project.id)}
+                        onMouseLeave={() => setHoveredProject(null)}
+                        onClick={() => navigator(project.name)}
+                    >
+                        <img className="preview" src={project.src} width={"80%"} height={"50%"} alt={project.name} />
+                        {hoveredProject === project.id && (
+                            <div className="project-modal">
+                                <h3>{project.name}</h3>
+                            </div>
+                        )}
+                    </div>
+                ))}
             </div>
             <div id="information">
                 <section className="greeting">
