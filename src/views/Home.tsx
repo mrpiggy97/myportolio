@@ -61,7 +61,7 @@ export default function Home() : JSX.Element{
                         onMouseLeave={() => setHoveredProject(null)}
                         onClick={() => navigator(project.name)}
                     >
-                        <img className="preview" src={project.src} width={"80%"} height={"50%"} alt={project.name} />
+                        <img className="preview" src={project.src} width={"95%"} height={"50%"} alt={project.name} />
                         {hoveredProject === project.id && (
                             <div className="project-modal">
                                 <h3>{project.name}</h3>

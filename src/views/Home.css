@@ -8,6 +8,7 @@ div#home{
     color: rgb(0, 255, 65);
     font-family: "Roboto Mono";
     min-height: 100%;
+    max-width: 95%;
 }
 
 div#greeting-box{
@@ -35,7 +36,7 @@ div.project-container {
 
 div.project-modal {
     position: absolute;
-    width: 80%;
+    width: 95%;
     height: 50%;
     background-color: rgba(0, 0, 0, 0.85);
     display: flex;
