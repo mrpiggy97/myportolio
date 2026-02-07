@@ -4,7 +4,7 @@ body{
 
 div#app{
   display: grid;
-  min-height: 120vh;
+  min-height: 130vh;
   min-width: 98vw;
   font-family: sans-serif;
   grid-template-columns: 28% 72%;
@@ -55,7 +55,37 @@ div#project-navigation{
 div#views{
   display: grid;
   grid-area: views;
+  grid-template-columns: 100%;
+  grid-template-rows: 5% 95%;
+  grid-template-areas: "views-navigator"
+                        "routes";
   background-color: rgb(1, 1, 36);
+}
+
+div#views-navigator{
+  display: grid;
+  grid-area: views-navigator;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 100%;
+  grid-template-areas: "current-page .";
+  align-items: baseline;
+  justify-items: center;
+  background-color: rgb(10, 10, 80);
+}
+div#current-page{
+  display: grid;
+  grid-area: current-page;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(2, 2, 19);
+  border: solid 1px cyan;
+  box-shadow: 0 0 10px cyan;
+  min-width: 97%;
+  min-height: 100%;
+}
+div#routes{
+  display: grid;
+  grid-area: routes;
 }
 
 footer#app-footer{

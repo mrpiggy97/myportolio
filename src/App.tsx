@@ -55,6 +55,7 @@ function ShowProjects() : JSX.Element{
 
 function App() : JSX.Element {
   const [srcExpanded, setSrcExpanded] = useState(false)
+  const location = useLocation()
   const toggleSrc = () => {
     setSrcExpanded(!srcExpanded)
   }
@@ -103,13 +104,20 @@ function App() : JSX.Element {
       </div>
 
       <div id='views'>
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/devhttp' element={<DevHttp/>}/>
-          <Route path='/space-simulation' element={<SpaceSimulation/>}/>
-          <Route path='/piggyhttp' element={<PiggyHttp/>} />
-          <Route path='/pathfinder' element={<PathFinder/>} />
-        </Routes>
+        <div id='views-navigator'>
+          <div id='current-page'>
+            <span><FontAwesomeIcon icon={faCode}/>{location.pathname !== "/" ? location.pathname.substring(1) : "Home"}</span>
+          </div>
+        </div>
+        <div id='routes'>
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/devhttp' element={<DevHttp/>}/>
+            <Route path='/space-simulation' element={<SpaceSimulation/>}/>
+            <Route path='/piggyhttp' element={<PiggyHttp/>} />
+            <Route path='/pathfinder' element={<PathFinder/>} />
+          </Routes>          
+        </div>
       </div>
 
       <footer id='app-footer'>
