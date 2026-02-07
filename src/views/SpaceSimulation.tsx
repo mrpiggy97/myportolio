@@ -1,7 +1,70 @@
+import { useEffect, useState } from "react"
+import "./SpaceSimulation.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faDocker, faGit, faGitAlt, faGithub, faReact } from "@fortawesome/free-brands-svg-icons"
+import { faLink } from "@fortawesome/free-solid-svg-icons"
+
 export default function SpaceSimulation() : JSX.Element{
+    const [displayText, setDisplayText] = useState("This is space-simulation")
+
+    useEffect(() => {
+        const japaneseChars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01"
+        const text = "<h1>This is space simulation</h1>"
+        
+        const startAnimation = () => {
+            let iteration = 0
+            const interval = setInterval(() => {
+                setDisplayText(
+                    text
+                        .split("")
+                        .map((char, index) => {
+                            if (char === " ") return " "
+                            if (index < iteration) return char
+                            return japaneseChars[Math.floor(Math.random() * japaneseChars.length)]
+                        })
+                        .join("")
+                )
+                if (iteration >= text.length) {
+                    clearInterval(interval)
+                    setTimeout(startAnimation, 3500)
+                }
+                iteration += 1 / 3
+            }, 30)
+        }
+
+        startAnimation()
+    }, [])
+
+    // Generate line numbers based on content sections
+    const lineNumbers = Array.from({ length: 25 }, (_, i) => i + 1)
+
     return(
-        <div>
-            space simulation page
+        <div id="space-simulation">
+            <div id="lines">
+                {lineNumbers.map(num => (
+                    <div key={num} className="line-number">{num}</div>
+                ))}
+            </div>
+            <div id="space-simulation-name">
+                <h1>{displayText}</h1>
+            </div>
+            <div id="space-simulation-preview">
+                <img src="/space-simulation.gif" alt="" width={"80%"} height={"80%"}/>
+            </div>
+            <div id="space-simulation-description">
+                <p>
+                    <span className="declaration">let </span><span className="variable">description = </span> `This is a simulation of our solar system, it allows the user to appreciate
+                    how long each planets takes to make one full orbit around our sun. It also
+                    let's the user appreciate the rotational speed of each planet.`
+                </p>
+            </div>
+            <div id="space-simulation-stack">
+                <p><span className="declaration">const </span><span className="variable">stack =</span> [<FontAwesomeIcon icon={faReact}/>, Ts, Three.js, <FontAwesomeIcon icon={faGithub}/>, <FontAwesomeIcon icon={faGitAlt}/>, Netlify, <FontAwesomeIcon icon={faDocker}/>]</p>
+            </div>
+            <div id="space-simulation-links">
+                <p><span className="declaration">let </span><span className="variable">repo = </span><a href="https://github.com/mrpiggy97/space-simulation" target="_blank">Github Repo <FontAwesomeIcon icon={faGithub}/></a></p>
+                <p><span className="declaration">let </span><span className="variable"> link = </span><a href="https://simulationsolar.netlify.app/" target="_blank">link to project <FontAwesomeIcon icon={faLink}/></a></p>
+            </div>
         </div>
     )
 }

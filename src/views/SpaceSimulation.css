@@ -1,0 +1,103 @@
+div#space-simulation {
+    display: grid;
+    grid-template-columns: 5% 20% 60% 20%;
+    grid-template-rows: 20% 35% 15% 10% 20%;
+    grid-template-areas: "lines . name ."
+                        "lines . preview . "
+                        "lines . description ."
+                        "lines . stack ."
+                        'lines . links .';
+    color: rgb(0, 255, 65);
+    font-family: "Roboto Mono";
+    min-height: 90%;
+    color: cyan;
+    font-size: large;
+}
+
+div#lines{
+    display: flex;
+    flex-direction: column;
+    grid-area: lines;
+    border-right: solid 2px silver;
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 0 10px;
+    user-select: none;
+}
+
+.line-number {
+    color: rgba(128, 128, 128, 0.7);
+    font-family: "Roboto Mono", monospace;
+    font-size: large;
+    text-align: right;
+    line-height: 1.5;
+    min-width: 30px;
+}
+
+div#space-simulation-name {
+    display: grid;
+    grid-area: name;
+    justify-items: center;
+    min-height: 100%;
+}
+
+div#space-simulation-name h1 {
+    font-size: 2rem;
+    color: rgb(0, 255, 65);
+    animation: matrixGlow 3s infinite;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8),
+                     0 0 20px rgba(0, 255, 65, 0.6);
+}
+
+div#space-simulation-description{
+    display: grid;
+    grid-area: description;
+    justify-items: center;
+    min-height: 100%;
+    max-width: 85%;
+}
+
+div#space-simulation-preview{
+    display: grid;
+    grid-area: preview;
+    justify-items: left;
+    align-items: center;
+}
+
+div#space-simulation-stack{
+    display: grid;
+    grid-area: stack;
+    align-items: baseline;
+    justify-items: left;
+}
+
+div#space-simulation-links{
+    display: grid;
+    grid-area: links;
+    grid-template-rows: repeat(2,50%);
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-items: left;
+}
+
+img{
+    box-shadow: 0 0 25px cyan;
+}
+
+span.declaration{
+    color: rgb(127, 4, 243);
+}
+span.variable{
+    color: white;
+}
+
+@keyframes matrixGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 255, 65, 0.8),
+                     0 0 20px rgba(0, 255, 65, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(0, 255, 65, 1),
+                     0 0 30px rgba(0, 255, 65, 0.8),
+                     0 0 40px rgba(0, 255, 65, 0.6);
+    }
+}
