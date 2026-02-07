@@ -5,11 +5,11 @@ import { faDocker, faGit, faGitAlt, faGithub, faReact } from "@fortawesome/free-
 import { faLink } from "@fortawesome/free-solid-svg-icons"
 
 export default function SpaceSimulation() : JSX.Element{
-    const [displayText, setDisplayText] = useState("This is space-simulation")
+    const [displayText, setDisplayText] = useState("spacesimulation")
 
     useEffect(() => {
-        const japaneseChars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01"
-        const text = "<h1>This is space simulation</h1>"
+        const japaneseChars = "アイウエオカキクケコサシスセソタチ"
+        const text = "space-simulation"
         
         const startAnimation = () => {
             let iteration = 0
@@ -26,14 +26,15 @@ export default function SpaceSimulation() : JSX.Element{
                 )
                 if (iteration >= text.length) {
                     clearInterval(interval)
-                    setTimeout(startAnimation, 3500)
+                    setTimeout(startAnimation, 5000)
                 }
                 iteration += 1 / 3
             }, 30)
         }
-
+        
         startAnimation()
     }, [])
+
 
     // Generate line numbers based on content sections
     const lineNumbers = Array.from({ length: 25 }, (_, i) => i + 1)
@@ -49,7 +50,7 @@ export default function SpaceSimulation() : JSX.Element{
                 <h1>{displayText}</h1>
             </div>
             <div id="space-simulation-preview">
-                <img src="/space-simulation.gif" alt="" width={"80%"} height={"80%"}/>
+                <img src="/space-simulation.gif" alt="" width={"90%"} height={"90%"}/>
             </div>
             <div id="space-simulation-description">
                 <p>
