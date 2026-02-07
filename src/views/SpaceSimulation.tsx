@@ -54,17 +54,17 @@ export default function SpaceSimulation() : JSX.Element{
             </div>
             <div id="space-simulation-description">
                 <p>
-                    <span className="declaration">let </span><span className="variable">description = </span> `This is a simulation of our solar system, it allows the user to appreciate
+                    <span className="declaration">const </span><span className="variable">description : <span className="data-type">string</span> = </span> `This is a simulation of our solar system, it allows the user to appreciate
                     how long each planets takes to make one full orbit around our sun. It also
                     let's the user appreciate the rotational speed of each planet.`
                 </p>
             </div>
             <div id="space-simulation-stack">
-                <p><span className="declaration">const </span><span className="variable">stack =</span> [<FontAwesomeIcon icon={faReact}/>, Ts, Three.js, <FontAwesomeIcon icon={faGithub}/>, <FontAwesomeIcon icon={faGitAlt}/>, Netlify, <FontAwesomeIcon icon={faDocker}/>]</p>
+                <p><span className="declaration">const </span><span className="variable">stack : <span className="data-type">string[]</span> =</span> [<FontAwesomeIcon icon={faReact}/>, Ts, Three.js, <FontAwesomeIcon icon={faGithub}/>, <FontAwesomeIcon icon={faGitAlt}/>, Netlify, <FontAwesomeIcon icon={faDocker}/>]</p>
             </div>
             <div id="space-simulation-links">
-                <p><span className="declaration">let </span><span className="variable">repo = </span><a href="https://github.com/mrpiggy97/space-simulation" target="_blank">Github Repo <FontAwesomeIcon icon={faGithub}/></a></p>
-                <p><span className="declaration">let </span><span className="variable"> link = </span><a href="https://simulationsolar.netlify.app/" target="_blank">link to project <FontAwesomeIcon icon={faLink}/></a></p>
+                <p><span className="declaration">const </span><span className="variable">repo : <span className="data-type">string</span> = </span><a href="https://github.com/mrpiggy97/space-simulation" target="_blank">Github Repo <FontAwesomeIcon icon={faGithub}/></a></p>
+                <p><span className="declaration">const </span><span className="variable"> link : <span className="data-type">string</span> = </span><a href="https://simulationsolar.netlify.app/" target="_blank">link to project <FontAwesomeIcon icon={faLink}/></a></p>
             </div>
         </div>
     )

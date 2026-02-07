@@ -89,6 +89,9 @@ span.declaration{
 span.variable{
     color: white;
 }
+span.data-type{
+    color: deeppink;
+}
 
 @keyframes matrixGlow {
     0%, 100% {
