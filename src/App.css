@@ -130,12 +130,23 @@ div.explorer{
 
 div.projects{
   display: grid;
-  grid-template-rows: 3% 50% 47%;
-  grid-template-columns: 10% 10% 80%;
-  overflow: hidden;
-  grid-template-areas:  "projects-source projects-source ."
-                        ". projects-directory projects-directory"
-                        "project-logs project-logs project-logs";
+  grid-area: projects;
+  grid-template-rows: 5% 45% 5% 45%;
+  grid-template-areas: "frontend-header"
+                       "frontend"
+                       "backend-header"
+                       "backend";
+}
+
+@media screen and (min-width: 700px){
+  div#projects{
+    grid-template-columns: repeat(2, 46%);
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "frontend-header backend-header"
+                         "frontend backend";
+    justify-content: space-around;
+    column-gap: 20px;
+  }
 }
 
 div.projects-source{
@@ -147,10 +158,19 @@ div.projects-source{
 }
 div.projects-directories{
   display: grid;
-  grid-area: projects-directory;
-  align-items: baseline;
-  align-content: baseline;
-  grid-template-rows: repeat(5, 10%);
+  grid-area: backend-header;
+  align-items: center;
+  justify-items: center;
+}
+
+div.backend-header1{
+  background-color: rgb(42, 4, 78);
+}
+div.backend-header2{
+  background-color: rgba(241, 5, 135, 0.911);
+}
+div.backend-header3{
+  background-color: rgb(42, 4, 78);
 }
 
 div.project-logs{
@@ -164,8 +184,13 @@ blockquote{
   align-items: baseline;
 }
 
-p.show-projects{
-  cursor: pointer;
+@media screen and (min-width: 700px){
+  div#frontend{
+    row-gap: 60px;
+  }
+  div#backend{
+    row-gap: 60px;
+  }
 }
 
 p.project{
