@@ -1,0 +1,18 @@
+[
+{"hash":"7f509b3a422f12b011ac8143fc3cebc89abc6b46","author":"mrpiggy97","date":"2026-02-01 22:09:25 -0400","message":"removes unused code"},
+{"hash":"f19db5f6b015b8491f5c13bca680ef78a1ecdb82","author":"mrpiggy97","date":"2026-02-01 22:09:17 -0400","message":"updates packages"},
+{"hash":"0609e321d21a7e636e31b1ac63623848d16a6925","author":"mrpiggy97","date":"2026-02-02 00:13:17 +0000","message":"Updates vite config"},
+{"hash":"efd7f7fe5d0a90c5cb871742df5d33c0610740c5","author":"mrpiggy97","date":"2023-05-30 21:30:58 +0000","message":"improved rendering time"},
+{"hash":"0a5e88b95db7eb543742f859b14af379cba69132","author":"mrpiggy97","date":"2023-05-15 13:20:33 +0000","message":"added space between gif and text"},
+{"hash":"0fc16d640e73a1494b42bfc5acd60465ee0b1f2b","author":"mrpiggy97","date":"2023-05-15 13:18:59 +0000","message":"added README"},
+{"hash":"5098a12ce9c886a3ac191cf66ee7e870442175cf","author":"mrpiggy97","date":"2023-05-13 15:01:22 +0000","message":"changed title in head"},
+{"hash":"d4ba26a088e8a6a6a31fb86864c79c8c876205f7","author":"mrpiggy97","date":"2023-05-13 14:12:36 +0000","message":"deleted unused svg"},
+{"hash":"f8db6bf648bd9b98bec5152fd43ee81a4c1e35f9","author":"mrpiggy97","date":"2023-05-13 05:57:13 +0000","message":"deleted unused import"},
+{"hash":"d1bc8b2aa2d1389bf2ab539f6e5f29d1bd0be3d9","author":"mrpiggy97","date":"2023-05-13 05:56:42 +0000","message":"finished doing the solar system"},
+{"hash":"bb8db1407e2bbdb3b48663ed89571eba2e2f57b6","author":"mrpiggy97","date":"2023-05-13 05:33:05 +0000","message":"added planets and orbit animations for them"},
+{"hash":"9b8dad22c75c3d807bbbf93166d89ceab60b9cc2","author":"mrpiggy97","date":"2023-05-13 01:04:07 +0000","message":"added animation"},
+{"hash":"528de1765f392f24871fee8217b6764a89ded703","author":"mrpiggy97","date":"2023-05-12 13:55:57 +0000","message":"deleted orbit controls, changed, changed position for first mesh"},
+{"hash":"6cac518cf02459c0b7edff2571a6a677ef053c0d","author":"mrpiggy97","date":"2023-05-12 02:57:20 +0000","message":"added 3d models"},
+{"hash":"e9aade11ae4ef44e5e36aa3fe17bcacd5f4547f9","author":"mrpiggy97","date":"2023-05-10 17:11:12 +0000","message":"first commit"},
+{"hash":"594b76e742dbbe59bf315fc32391b283bbc1f9e2","author":"fabianjrivas","date":"2023-05-13 10:15:28 -0400","message":"Initial commit"}
+]

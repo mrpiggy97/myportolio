@@ -1,394 +1,134 @@
+body{
+  margin: 0;
+}
+
 div#app{
-  min-height: 1300vh;
-  min-width: 100vw;
-  background-image: url("./assets/space.jpg");
-  background-position: center;
-  background-size: cover;
-  color: rgba(88, 15, 88, 0.548);
   display: grid;
+  min-height: 130vh;
+  max-height: 130vh;
+  min-width: 98vw;
+  font-family: sans-serif;
+  grid-template-columns: 28% 72%;
+  grid-template-rows: 5% 92% 3%;
+  grid-template-areas:   "app-header app-header"
+                         "app-menu views"
+                         "app-footer app-footer";
+  color:#00FF9C;
+}
+
+header#app-header{
+  display: grid;
+  grid-area: app-header;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(1, 37, 15);
+  color: #00FF9C;
+  border: solid 2px #00FF9C;
+  border-radius: 5px;
+}
+
+div#app-menu{
+  display: grid;
+  grid-area: app-menu;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 100%;
+  grid-template-areas:  "my-links project-navigation";
+  background-color: rgb(10, 10, 80);
+}
+
+div#my-links{
+  display: grid;
+  grid-area: my-links;
   grid-template-columns: 100%;
-  grid-template-rows: 10% 90%;
-  grid-template-areas: "header"
-                       "projects";
-  color: rgb(11, 208, 235);
+  justify-items: center;
+  grid-template-rows: repeat(7, 10%);
+  background-color: rgb(1, 1, 36);
+  color: #00FF9C;
 }
-
-@media screen and (min-width: 701px){
-  div#app{
-    min-height: 800vh;
-    min-width: 99vw;
-    grid-template-rows: 15% 85%;
-  }
-}
-
-@media screen and (min-width: 1082px) {
-  div#app{
-    min-height: 600vh;
-    max-width: 99vw;
-    background-size:cover;
-    grid-template-rows: 10% 90%;
-  }
-}
-
-@media screen and (min-width: 1220px){
-  div#app{
-    min-width: 99vw;
-    min-height: 350vh;
-  }
-}
-
-div#header{
+div#project-navigation{
   display: grid;
-  grid-area: header;
+  font-size: small;
+  grid-area: project-navigation;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(3, 33%);
-  grid-template-areas: "cyber-header"
-                       "social-links"
-                       "planets";
-  font-size: xx-large;
+  grid-template-rows: 5% 5% 90%;
 }
 
-@media screen and (min-width: 1082px){
-  div#header{
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 100%;
-    grid-template-areas: "planets cyber-header social-links";
-  }
-}
-
-div#planets{
+div#views{
   display: grid;
-  grid-area: planets;
-}
-
-div#cyber-header{
-  display: grid;
-  grid-area: cyber-header;
+  grid-area: views;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(2, 50%);
+  grid-template-rows: 5% 95%;
+  grid-template-areas: "views-navigator"
+                        "routes";
+  background-color: rgb(1, 1, 36);
+}
+
+div#views-navigator{
+  display: grid;
+  grid-area: views-navigator;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 100%;
+  grid-template-areas: "current-page .";
   align-items: baseline;
   justify-items: center;
+  background-color: rgb(10, 10, 80);
 }
-
-div#social-links{
+div#current-page{
   display: grid;
-  grid-area: social-links;
-  grid-template-columns: repeat(3, 33%);
-  grid-template-rows: repeat(2, 50%);
-  grid-template-areas: "github linkedin leetcode"
-                       "number email email";
-  font-size: medium;
-}
-
-div.github{
-  display: grid;
-  grid-area: github;
+  grid-area: current-page;
   align-items: center;
+  justify-items: center;
+  background-color: rgb(2, 2, 19);
+  border: solid 1px cyan;
+  box-shadow: 0 0 10px cyan;
+  min-width: 97%;
+  min-height: 100%;
+}
+div#routes{
+  display: grid;
+  grid-area: routes;
+}
+
+footer#app-footer{
+  display: grid;
+  grid-area: app-footer;
+  grid-template-columns: 100%;
+  justify-items: center;
+  align-items: center;
+  background-color: rgb(1, 37, 15);
+  color: #00FF9C;
+  border: solid 2px #00FF9C;
+  border-radius: 5px;
+}
+
+.large-icon{
+  font-size: x-large;
+}
+
+p.handshake{
+  border: solid 2px #00FF9C;
+  padding: 7px;
+}
+
+a{
+  cursor: pointer;
+  color: #00FF9C;
+}
+
+div.navigation-header{
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background-color: rgb(1, 37, 15);
+  border: solid 1px #00FF9C;
+}
+
+div.explorer{
+  display: grid;
   justify-items: center;
 }
 
-div.linkedin{
-  display: grid;
-  grid-area: linkedin;
-}
-div.leetcode{
-  display: grid;
-  grid-area: leetcode;
-}
-div.number{
-  display: grid;
-  grid-area: number;
-}
-div.email{
-  display: grid;
-  grid-area: email;
-}
-
-div.container{
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100%;
-  align-items: center;
-  justify-items: center;
-}
-
-div.neon-sign{
-  display: grid;
-  border: 2px solid rgba(241, 5, 135, 0.911);
-  box-shadow: 0 0 1rem rgba(241, 5, 135, 0.911);
-  padding: 10px;
-  grid-column: 1;
-  grid-row: 1;
-  animation: glitch 1s linear infinite;
-}
-
-div.neon-sign2{
-  display: grid;
-  border: 2px solid rgb(11, 208, 235);
-  box-shadow: 0 0 1rem rgb(11, 208, 235);;
-  padding: 10px;
-  grid-column: 1;
-  grid-row: 1;
-  animation: glitch2 2s linear infinite;
-}
-
-div.github-sign{
-  background-color: navy;
-  cursor: pointer;
-}
-div.github-sign2{
-  background-color: darkblue;
-  cursor: pointer;
-}
-div.linkedin-sign{
-  background-color: blue;
-  cursor: pointer;
-}
-div.linkedin-sign2{
-  background-color: darkcyan;
-  cursor: pointer;
-}
-div.leetcode-sign{
-  background-color: darkorange;
-  cursor: pointer;
-}
-div.leetcode-sign2{
-  background-color: darkgoldenrod;
-  cursor: pointer;
-}
-div.number-sign{
-  background-color: black;
-}
-div.number-sign2{
-  background-color: darkgray;
-}
-div.email-sign{
-  background-color: darkgreen;
-}
-div.email-sign2{
-  background-color: navy;
-}
-
-div#cyberpunk-container{
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100%;
-}
-
-div.cyberpunk{
-  display: grid;
-  border: 2px solid rgba(241, 5, 135, 0.911);
-  box-shadow: 0 0 1rem rgba(241, 5, 135, 0.911);
-  background-color: rgb(42, 4, 78);
-  padding: 10px;
-  grid-column: 1;
-  grid-row: 1;
-  animation: glitch 1s linear infinite;
-}
-
-div.cyberpunk2{
-  display: grid;
-  border: 2px solid rgb(11, 208, 235);
-  box-shadow: 0 0 1rem rgb(11, 208, 235);;
-  background-color: rgba(241, 5, 135, 0.911);
-  padding: 10px;
-  grid-column: 1;
-  grid-row: 1;
-  animation: glitch2 2s linear infinite;
-}
-
-div.cyberpunk3{
-  border: 2px solid rgb(11, 208, 235);;
-  box-shadow: 0 0 1rem white;
-  background-color: rgba(241, 5, 135, 0.911);
-  padding: 10px;
-  grid-column: 1;
-  grid-row: 1;
-  animation: glitch3 3s linear infinite;
-}
-
-div.fullstack1{
-  color: white;
-  background-color: #1aef46;
-  font-size: medium;
-}
-
-div.fullstack2{
-  background-color: navy;
-  font-size: medium;
-}
-
-div.fullstack3{
-  background-color: navy;
-  font-size: medium;
-}
-
-@keyframes glitch{
-  0% {
-    transform: none;
-    opacity: 1;
-  }
-  7% {
-    transform: skew(-0.5deg, -0.9deg);
-    opacity: 0.75;
-  }
-  10% {
-    transform: none;
-    opacity: 1;
-  }
-  27% {
-    transform: none;
-    opacity: 1;
-  }
-  30% {
-    transform: skew(0.8deg, -0.1deg);
-    opacity: 0.75;
-  }
-  35% {
-    transform: none;
-    opacity: 1;
-  }
-  52% {
-    transform: none;
-    opacity: 1;
-  }
-  55% {
-    transform: skew(-1deg, 0.2deg);
-    opacity: 0.75;
-  }
-  50% {
-    transform: none;
-    opacity: 1;
-  }
-  72% {
-    transform: none;
-    opacity: 1;
-  }
-  75% {
-    transform: skew(0.4deg, 1deg);
-    opacity: 0.75;
-  }
-  80% {
-    transform: none;
-    opacity: 1;
-  }
-  100% {
-    transform: none;
-    opacity: 1;
-  }
-}
-
-@keyframes glitch2{
-  0% {
-    transform: none;
-    opacity: 0.25;
-  }
-  7% {
-    transform: translate(-2px, -3px);
-    opacity: 0.5;
-  }
-  10% {
-    transform: none;
-    opacity: 0.25;
-  }
-  27% {
-    transform: none;
-    opacity: 0.25;
-  }
-  30% {
-    transform: translate(-5px, -2px);
-    opacity: 0.5;
-  }
-  35% {
-    transform: none;
-    opacity: 0.25;
-  }
-  52% {
-    transform: none;
-    opacity: 0.25;
-  }
-  55% {
-    transform: translate(-5px, -1px);
-    opacity: 0.5;
-  }
-  50% {
-    transform: none;
-    opacity: 0.25;
-  }
-  72% {
-    transform: none;
-    opacity: 0.25;
-  }
-  75% {
-    transform: translate(-2px, -6px);
-    opacity: 0.5;
-  }
-  80% {
-    transform: none;
-    opacity: 0.25;
-  }
-  100% {
-    transform: none;
-    opacity: 0.25;
-  }
-}
-
-@keyframes glitch3 {
-  0% {
-    transform: none;
-    opacity: 0.25;
-  }
-  7% {
-    transform: translate(2px, 3px);
-    opacity: 0.5;
-  }
-  10% {
-    transform: none;
-    opacity: 0.25;
-  }
-  27% {
-    transform: none;
-    opacity: 0.25;
-  }
-  30% {
-    transform: translate(5px, 2px);
-    opacity: 0.5;
-  }
-  35% {
-    transform: none;
-    opacity: 0.25;
-  }
-  52% {
-    transform: none;
-    opacity: 0.25;
-  }
-  55% {
-    transform: translate(5px, 1px);
-    opacity: 0.5;
-  }
-  50% {
-    transform: none;
-    opacity: 0.25;
-  }
-  72% {
-    transform: none;
-    opacity: 0.25;
-  }
-  75% {
-    transform: translate(2px, 6px);
-    opacity: 0.5;
-  }
-  80% {
-    transform: none;
-    opacity: 0.25;
-  }
-  100% {
-    transform: none;
-    opacity: 0.25;
-  }
-}
-
-div#projects{
+div.projects{
   display: grid;
   grid-area: projects;
   grid-template-rows: 5% 45% 5% 45%;
@@ -409,26 +149,14 @@ div#projects{
   }
 }
 
-div#frontend-header{
+div.projects-source{
   display: grid;
-  grid-area: frontend-header;
-  align-items: center;
-  justify-items: center;
+  grid-area: projects-source;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: 100%;
+  cursor: pointer;
 }
-
-div.frontend-header1{
-  background-color: navy;
-}
-
-div.frontend-header2{
-  background-color: rgb(42, 4, 78);
-}
-
-div.frontend-header3{
-  background-color: navy;
-}
-
-div#backend-header{
+div.projects-directories{
   display: grid;
   grid-area: backend-header;
   align-items: center;
@@ -445,25 +173,15 @@ div.backend-header3{
   background-color: rgb(42, 4, 78);
 }
 
-div#frontend{
+div.project-logs{
   display: grid;
-  grid-area: frontend;
-  grid-template-columns: 80%;
-  justify-content: center;
-  align-content: baseline;
-  align-items: baseline;
-  grid-template-rows: repeat(4, 20%);
-  row-gap: 100px;
+  grid-area: project-logs;
+  row-gap: 15px;
+  overflow-y: scroll;
 }
-
-
-div#backend{
+blockquote{
   display: grid;
-  grid-area: backend;
-  grid-template-columns: 80%;
-  justify-content: center;
-  grid-template-rows: repeat(4, 20%);
-  row-gap: 30px;
+  align-items: baseline;
 }
 
 @media screen and (min-width: 700px){
@@ -475,7 +193,14 @@ div#backend{
   }
 }
 
-canvas.objects{
-  min-height: 100%;
-  min-width: 100%;
+p.project{
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 1px transparent;
+  padding: 0px;
+}
+p.selected{
+  background-color: rgb(1, 1, 36);
+  border: solid 1px rgb(1, 1, 36);
+  padding: 0px;
 }

@@ -1,0 +1,9 @@
+div.education-details{
+    display: grid;
+    justify-items: center;
+    min-height: 90%;
+    max-height: 90%;
+    border: solid 2px cyan;
+    box-shadow: 0 0 15px cyan;
+    color: cyan
+}

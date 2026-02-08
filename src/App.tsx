@@ -1,213 +1,134 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngular, faDocker, faGitAlt, faGithub, faGitlab, faGolang, faJs, faLinkedin, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import './App.css'
-import { Canvas } from '@react-three/fiber'
-import Earth from './Earth'
-import Moon from './Moon'
-import Project, {projectProps} from './Project'
+import { faArrowDown, faArrowRight, faCode, faDatabase, faHandshake, faHSquare, faList,faSearch} from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from 'react'
+import {Routes, Route, useNavigate, useLocation} from "react-router"
+import Home from './views/Home'
+import DevHttp from './views/DevHttp'
+import SpaceSimulation from './views/SpaceSimulation'
+import PiggyHttp from './views/PiggyHttp'
+import PathFinder from './views/PathFinder'
+import ProjectLog from './components/ProjectLog'
 
-function App() {
-  const openGithub = () => {
-    window.open("https://www.github.com/mrpiggy97", "_blank")
+function ShowProjects() : JSX.Element{
+  const [showProjects, setShowProjects] = useState(true)
+  const navigator = useNavigate()
+  const location = useLocation()
+  const toggleShowProjects = () => {
+    setShowProjects(!showProjects)
   }
-  const openLinkedin = () => {
-    window.open("https://www.linkedin.com/in/fabian-jesus-rivas", "_blank")
-  }
-  const openLeetcode = () => {
-    window.open("https://leetcode.com/mrpiggy97")
-  }
-  const baseGithubURI = "https://www.github.com/mrpiggy97"
-  const frontend : projectProps[] = [
-    {
-      name: "space-simulation",
-      github: `${baseGithubURI}/space-simulation`,
-      link: "https://zingy-hotteok-ae1f96.netlify.app/",
-      stack: "Typescript, React, Three.js, Netlify",
-      description: "A 3d simulation of our solar system, the objective of this project was to learn how to implement 3d elements with typescript and React. The deployment and CI pipeline is thanks to Netlify",
-      gifURI: "./space-simulation.gif",
-      frontend: true
-    },
-    {
-      name : "mypathfinder",
-      github: `${baseGithubURI}/mypathfinder`,
-      link: "https://boisterous-cocada-9ea93b.netlify.app/",
-      stack: "Typescript, React, Redux, docker, Node.js, Netlify",
-      description: "This projects's objective was to make a project that implements Dijkstra's algorithm with animations that show you how the graph grows to find the end node. The deployment and CI pipeline is thanks to Netlify",
-      gifURI: "./pathfinder1.gif",
-      frontend: true
-    },
-    {
-      name: "restClient",
-      github: `${baseGithubURI}/restClient`,
-      link: "https://hub.docker.com/repository/docker/fabianjesusrivas/rest-client/general",
-      stack: "Typescript, React, Redux, Go, Docker, REST, API, Websockets",
-      description: "A chat app that connects with api to send messages and recieves them through websockets, you may follow instructions on github page to run project",
-      gifURI: "./app-gif.gif",
-      frontend: true
-    },
-    {
-      name: "resume",
-      github: `${baseGithubURI}/resume`,
-      link: "https://gleaming-mooncake-1e1089.netlify.app/",
-      stack: "Typescript, React, Netlify",
-      description: "This is my resume, i converted it into a pdf and use it to apply for jobs, the deployment and CI pipeline is thanks to Netlify",
-      gifURI:"./resume.gif",
-      frontend: true
+  const goTo = (path : string) => {
+    if(location.pathname !== path){
+      navigator(path)
     }
-  ]
-  const backend : projectProps[] = [
-    {
-      name: "rest",
-      github: `${baseGithubURI}/rest`,
-      link: "https://hub.docker.com/repository/docker/fabianjesusrivas/rest/general",
-      stack: "Go, Postgresql, REST API, Websockets",
-      description: "A backend rest api with websocket capability that serves restClient project, recieves and sends messages, stores user data and authenticates it",
-      gifURI: "./rest.gif",
-      frontend: false
-    },
-    {
-      name: "cqrs",
-      github: `${baseGithubURI}/cqrs`,
-      link: null,
-      stack: "Go, Docker, Elastic Search, CQRS, Nats",
-      description: "CQRS is a proyect built in Go that implements cqrs and elastic search, its objective was to build services based on event driven architecture. See the github instructions to run the project",
-      gifURI: "./cqrs.gif",
-      frontend: false
-    },
-  ]
-  console.log(window.innerWidth)
+  }
   return (
-    <div id="app">
-      <div id="header">
-        <div id="planets">
-          <Canvas className='objects'>
-            <ambientLight intensity={1}/>
-            <directionalLight position={[6,2,3]} intensity={2}/>
-            <Earth/>
-            <Moon/>
-          </Canvas>
+    <div className='projects-directories'>
+      <p className={location.pathname === "/" ? "project selected" : "project"} onClick={() => goTo("/")}>
+        <FontAwesomeIcon icon={faHandshake}/> Home
+      </p>
+      <p onClick={toggleShowProjects} className='show-projects'>
+        {showProjects ?  <FontAwesomeIcon icon={faArrowDown}/> : <FontAwesomeIcon icon={faArrowRight}/>}
+        <FontAwesomeIcon icon={faList}/> Projects
+      </p>
+      {
+        showProjects
+        ? <React.Fragment>
+            <p className={location.pathname === "/devhttp" ? "project selected" : "project"} onClick={() => goTo("/devhttp")}>
+              <FontAwesomeIcon icon={faCode}/> devhttp
+            </p>
+            <p className={location.pathname === "/space-simulation" ? "project selected" : "project"} onClick={() => goTo("/space-simulation")}>
+              <FontAwesomeIcon icon={faCode}/> space-simulation
+            </p>
+            <p className={location.pathname === "/piggyhttp" ? "project selected" : "project"} onClick={() => goTo("/piggyhttp")}>
+              <FontAwesomeIcon icon={faCode}/> piggyhttp
+            </p>
+            <p className={location.pathname === "/pathfinder" ? "project selected" : "project"} onClick={() => goTo("/pathfinder")}>
+              <FontAwesomeIcon icon={faCode}/> dijkstrafinder
+            </p>
+          </React.Fragment>
+        : null
+      }
+    </div>
+  )
+}
+
+function App() : JSX.Element {
+  const [srcExpanded, setSrcExpanded] = useState(false)
+  const [showLogs, setShowLogs] = useState(true)
+  const location = useLocation()
+  const toggleSrc = () => {
+    setSrcExpanded(!srcExpanded)
+  }
+  return(
+    <div id='app'>
+
+      <header id='app-header'>
+          Fabian Jesus Rivas Software Engineer
+      </header>
+
+      <div id='app-menu'>
+        <div id='my-links'>
+            <p>FJR</p>
+            <a href='https://www.linkedin.com/in/fabian-jesus-rivas' target='_blank'>
+              <FontAwesomeIcon icon={faLinkedin} className='large-icon'/>
+            </a>
+            <a href='https://www.github.com/mrpiggy97' target='_blank'>
+              <FontAwesomeIcon icon={faGithub} className='large-icon'/>
+            </a>
+            <a href='https://www.gitlab.com/frivas6' target='_blank'>
+              <FontAwesomeIcon icon={faGitlab} className='large-icon'/>
+            </a>
+            <a href='https://app.joinhandshake.com/profiles/fabian-jesus-rivas' target='_blank'>
+              <FontAwesomeIcon icon={faHSquare} className='large-icon'/>
+            </a>
+            <a href='https://www.leetcode.com/mrpiggy97' target='_blank'>
+              <FontAwesomeIcon icon={faCode} className='large-icon'/>
+            </a>
+            <a>
+              <FontAwesomeIcon icon={faGitAlt} className='large-icon'onClick={() => setShowLogs(!showLogs)}/>
+            </a>
         </div>
-        <div id='cyber-header'>
-          <div id="cyberpunk-container">
-            <div className='cyberpunk'>
-              FABIAN J RIVAS
-            </div>
-            <div className='cyberpunk2'>
-              FABIAN J RIVAS
-            </div>
-            <div className='cyberpunk3'>
-              FABIAN J RIVAS
-            </div>
+        <div id='project-navigation'>
+          <div className='explorer'>
+            <p>EXPLORER <FontAwesomeIcon icon={faSearch}/></p>
           </div>
-          <div id="cyberpunk-container">
-            <div className='cyberpunk fullstack1'>
-              FULLSTACK DEV
-            </div>
-            <div className='cyberpunk2 fullstack2'>
-              FULLSTACK DEV
-            </div>
-            <div className='cyberpunk3 fullstack3'>
-              FULLSTACK DEV
-            </div>
+          <div className='navigation-header'>
+            <p>MY PROJECTS AND PRESENTATION</p>
           </div>
-        </div>
-        <div id="social-links">
-          <div className='github'>
-            <div className='container' onClick={openGithub}>
-              <div className='neon-sign github-sign'>
-                GITHUB
-              </div>
-              <div className='neon-sign2 github-sign2'>
-                GITHUB
-              </div>
+          <div className='projects'>
+            <div className='projects-source' onClick={toggleSrc}>
+                  {srcExpanded ? <FontAwesomeIcon icon={faArrowDown}/> : <FontAwesomeIcon icon={faArrowRight}/>}
+                  <FontAwesomeIcon icon={faList}/>
+                  <span>src</span>
             </div>
-          </div>
-          <div className='linkedin'>
-            <div className='container' onClick={openLinkedin}>
-              <div className='neon-sign linkedin-sign'>
-                LINKEDIN
-              </div>
-              <div className='neon-sign2 linkedin-sign2'>
-                LINKEDIN
-              </div>
-            </div>
-          </div>
-          <div className='leetcode'>
-            <div className='container' onClick={openLeetcode}>
-              <div className='neon-sign leetcode-sign'>
-                LEETCODE
-              </div>
-              <div className='neon-sign2 leetcode-sign2'>
-                LEETCODE
-              </div>
-            </div>
-          </div>
-          <div className='number'>
-            <div className='container'>
-                <div className='neon-sign number-sign'>
-                  7866603157
-                </div>
-                <div className='neon-sign2 number-sign2'>
-                  7866603157
-                </div>
-            </div>
-          </div>
-          <div className='email'>
-            <div className='container'>
-              <div className='neon-sign email-sign'>
-                fabyjesusrivas10@gmail.com
-              </div>
-              <div className='neon-sign2 email-sign2'>
-                fabyjesusrivas10@gmail.com
-              </div>
-            </div>
+            {srcExpanded ? <ShowProjects/> : null}
+            {showLogs ? <ProjectLog/> : null}
           </div>
         </div>
       </div>
-      <div id="projects">
-        <div id="frontend-header">
-            <div className='cyberpunk frontend-header1'>
-              FRONTEND PROJECTS
-            </div>
-            <div className='cyberpunk2 frontend-header2'>
-              FRONTEND PROJECTS
-            </div>
-            <div className='cyberpunk3 frontend-header3'>
-              FRONTEND PROJECTS
-            </div>
+
+      <div id='views'>
+        <div id='views-navigator'>
+          <div id='current-page'>
+            <span><FontAwesomeIcon icon={faCode}/>{location.pathname !== "/" ? location.pathname.substring(1) : "Home"}</span>
+          </div>
         </div>
-        <div id="backend-header">
-            <div className='cyberpunk backend-header1'>
-              BACKEND PROJECTS
-            </div>
-            <div className='cyberpunk2 backend-header2'>
-              BACKEND PROJECTS
-            </div>
-            <div className='cyberpunk3 backend-header3'>
-              BACKEND PROJECTS
-            </div>
-        </div>
-        <div id="frontend">
-          {frontend.map((pr) => <Project
-          name={pr.name}
-          link={pr.link}
-          github={pr.github}
-          stack={pr.stack}
-          description={pr.description}
-          gifURI={pr.gifURI}
-          frontend={pr.frontend}
-          />)}
-        </div>
-        <div id="backend">
-        {backend.map((pr) => <Project
-          name={pr.name}
-          link={pr.link}
-          github={pr.github}
-          stack={pr.stack}
-          description={pr.description}
-          gifURI={pr.gifURI}
-          frontend={pr.frontend}
-          />)}
+        <div id='routes'>
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/devhttp' element={<DevHttp/>}/>
+            <Route path='/space-simulation' element={<SpaceSimulation/>}/>
+            <Route path='/piggyhttp' element={<PiggyHttp/>} />
+            <Route path='/pathfinder' element={<PathFinder/>} />
+          </Routes>          
         </div>
       </div>
+
+      <footer id='app-footer'>
+        <small>Contact me at fabyjesusrivas10@gmail.com</small>
+      </footer>
     </div>
   )
 }
