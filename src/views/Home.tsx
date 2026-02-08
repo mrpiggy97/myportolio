@@ -14,7 +14,7 @@ export default function Home() : JSX.Element{
 
     const projects = [
         { id: 'space', name: 'space-simulation', src: './space-simulation.gif' },
-        { id: 'pathfinder', name: 'pathfinder', src: './pathfinder1.gif' },
+        { id: 'pathfinder', name: 'dijkstrafinder', src: './pathfinder1.gif' },
         { id: 'devhttp', name: 'devhttp', src: '/devhttp1.gif' },
         { id: 'piggyhttp', name: 'piggyhttp', src: '/piggyhttp1.gif' }
     ]
