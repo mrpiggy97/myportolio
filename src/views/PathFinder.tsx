@@ -21,7 +21,7 @@ export default function PathFinder() : JSX.Element{
         description="dijkstrafinder is an algorithm visualizer that allows users to appreciate how
         Dijkstra's algorithm grows as it tries to find an end node. The user is also able to include
         obstacles for the algorithm to overcome"
-        github="https://www.github.com/mrpiggy97/space-simulation"
+        github="https://www.github.com/mrpiggy97/mypathfinder"
         link="https://dijkstrafinder.netlify.app/"
         Stack={FindetStack}
         />
