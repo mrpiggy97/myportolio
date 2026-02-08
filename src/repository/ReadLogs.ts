@@ -1,6 +1,6 @@
 import { Log } from "./Log";
 import home from "./home.json";
-import pathfinder from "./pathfinder.json"
+import dijkstrafinder from "./dijkstrafinder.json"
 import piggyhttp from "./piggyhttp.json"
 import devhttp from "./devhttp.json"
 import spaceSimulation from "./space-simulation.json"
@@ -9,8 +9,8 @@ import spaceSimulation from "./space-simulation.json"
 export function ReadLogs(filename : string): Log[] {
 	let data
 	switch (filename) {
-		case "pathfinder.json":
-			data = pathfinder
+		case "dijkstrafinder.json":
+			data = dijkstrafinder
 			break;
 		case "piggyhttp.json":
 			data = piggyhttp
