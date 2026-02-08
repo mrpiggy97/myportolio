@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDocker, faGitAlt, faGithub, faReact } from "@fortawesome/free-brands-svg-icons"
 import Project from "../components/Project"

@@ -55,7 +55,7 @@ function ShowProjects() : JSX.Element{
 }
 
 function App() : JSX.Element {
-  const [srcExpanded, setSrcExpanded] = useState(false)
+  const [srcExpanded, setSrcExpanded] = useState(true)
   const [showLogs, setShowLogs] = useState(true)
   const location = useLocation()
   const toggleSrc = () => {

@@ -23,7 +23,7 @@ export default function ProjectLog() : JSX.Element{
             <div id="graph">
                 <span>Graph</span>
             </div>
-            {logs.map((val,i) => <Commit message={val.message} author={val.author} date={val.date} commitHash={val.commitHash} key={val.commitHash} />)}
+            {logs.map((val) => <Commit message={val.message} author={val.author} date={val.date} commitHash={val.commitHash} key={val.commitHash} />)}
         </div>
     )
 }
