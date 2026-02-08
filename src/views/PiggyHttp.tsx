@@ -20,7 +20,7 @@ export default function PiggyHttp() : JSX.Element{
         description="Allows users to make http requests and websocket connections in a simple way. It does
         not need any extra configurations, to see instructions on how to install it visit the github
         link down below"
-        imageURL="/devhttp1.gif"
+        imageURL="/piggyhttp1.gif"
         github="https://www.github.com/mrpiggy97/piggyhttp"
         link={null}
         Stack={PiggyStack}
