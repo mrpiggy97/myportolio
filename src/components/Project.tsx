@@ -9,7 +9,7 @@ type props = {
     imageURL : string,
     description : string,
     github : string,
-    link : string,
+    link : string | null,
     Stack : () => JSX.Element
 }
 
@@ -71,7 +71,10 @@ export default function Project(props: props) : JSX.Element{
             </div>
             <div className="project-links">
                 <p><span className="declaration">const </span><span className="variable">repo : <span className="data-type">string</span> = </span><a href={props.github} target="_blank">Github Repo <FontAwesomeIcon icon={faGithub}/></a></p>
-                <p><span className="declaration">const </span><span className="variable"> link : <span className="data-type">string</span> = </span><a href={props.link} target="_blank">link to project <FontAwesomeIcon icon={faLink}/></a></p>
+                {props.link
+                ? <p><span className="declaration">const </span><span className="variable"> link : <span className="data-type">string</span> = </span><a href={props.link} target="_blank">link to project <FontAwesomeIcon icon={faLink}/></a></p>
+                : null
+                }
             </div>
         </div>
     )
