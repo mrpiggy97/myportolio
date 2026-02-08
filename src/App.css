@@ -5,6 +5,7 @@ body{
 div#app{
   display: grid;
   min-height: 130vh;
+  max-height: 130vh;
   min-width: 98vw;
   font-family: sans-serif;
   grid-template-columns: 28% 72%;
@@ -110,6 +111,7 @@ p.handshake{
 }
 
 a{
+  cursor: pointer;
   color: #00FF9C;
 }
 
@@ -130,9 +132,10 @@ div.projects{
   display: grid;
   grid-template-rows: 3% 50% 47%;
   grid-template-columns: 10% 10% 80%;
+  overflow: hidden;
   grid-template-areas:  "projects-source projects-source ."
                         ". projects-directory projects-directory"
-                        ". . .";
+                        "project-logs project-logs project-logs";
 }
 
 div.projects-source{
@@ -150,6 +153,12 @@ div.projects-directories{
   grid-template-rows: repeat(5, 10%);
 }
 
+div.project-logs{
+  display: grid;
+  grid-area: project-logs;
+  row-gap: 15px;
+  overflow-y: scroll;
+}
 blockquote{
   display: grid;
   align-items: baseline;

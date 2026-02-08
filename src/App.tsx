@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngular, faDocker, faGithub, faGitlab, faGolang, faJs, faLinkedin, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faAngular, faDocker, faGitAlt, faGithub, faGitlab, faGolang, faJs, faLinkedin, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import './App.css'
 import { faArrowDown, faArrowRight, faCode, faDatabase, faHandshake, faHSquare, faList,faSearch} from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
@@ -9,6 +9,7 @@ import DevHttp from './views/DevHttp'
 import SpaceSimulation from './views/SpaceSimulation'
 import PiggyHttp from './views/PiggyHttp'
 import PathFinder from './views/PathFinder'
+import ProjectLog from './components/ProjectLog'
 
 function ShowProjects() : JSX.Element{
   const [showProjects, setShowProjects] = useState(true)
@@ -55,6 +56,7 @@ function ShowProjects() : JSX.Element{
 
 function App() : JSX.Element {
   const [srcExpanded, setSrcExpanded] = useState(false)
+  const [showLogs, setShowLogs] = useState(true)
   const location = useLocation()
   const toggleSrc = () => {
     setSrcExpanded(!srcExpanded)
@@ -84,6 +86,9 @@ function App() : JSX.Element {
             <a href='https://www.leetcode.com/mrpiggy97' target='_blank'>
               <FontAwesomeIcon icon={faCode} className='large-icon'/>
             </a>
+            <a>
+              <FontAwesomeIcon icon={faGitAlt} className='large-icon'onClick={() => setShowLogs(!showLogs)}/>
+            </a>
         </div>
         <div id='project-navigation'>
           <div className='explorer'>
@@ -99,6 +104,7 @@ function App() : JSX.Element {
                   <span>src</span>
             </div>
             {srcExpanded ? <ShowProjects/> : null}
+            {showLogs ? <ProjectLog/> : null}
           </div>
         </div>
       </div>

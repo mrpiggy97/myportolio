@@ -1,0 +1,12 @@
+div.commit{
+    border-left: solid 4px rgb(241, 1, 241);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+div#graph{
+    display: grid;
+    justify-items: center;
+    background-color: rgb(1, 37, 15);
+    border: solid 1px #00FF9C;
+}
