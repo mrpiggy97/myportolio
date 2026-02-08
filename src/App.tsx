@@ -44,7 +44,7 @@ function ShowProjects() : JSX.Element{
             <p className={location.pathname === "/piggyhttp" ? "project selected" : "project"} onClick={() => goTo("/piggyhttp")}>
               <FontAwesomeIcon icon={faCode}/> piggyhttp
             </p>
-            <p className={location.pathname === "/pathfinder" ? "project selected" : "project"} onClick={() => goTo("/pathfinder")}>
+            <p className={location.pathname === "/dijkstrafinder" ? "project selected" : "project"} onClick={() => goTo("/dijkstrafinder")}>
               <FontAwesomeIcon icon={faCode}/> dijkstrafinder
             </p>
           </React.Fragment>
@@ -121,7 +121,7 @@ function App() : JSX.Element {
             <Route path='/devhttp' element={<DevHttp/>}/>
             <Route path='/space-simulation' element={<SpaceSimulation/>}/>
             <Route path='/piggyhttp' element={<PiggyHttp/>} />
-            <Route path='/pathfinder' element={<PathFinder/>} />
+            <Route path='/dijkstrafinder' element={<PathFinder/>} />
           </Routes>          
         </div>
       </div>
