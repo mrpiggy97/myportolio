@@ -45,7 +45,7 @@ function ShowProjects() : JSX.Element{
               <FontAwesomeIcon icon={faCode}/> piggyhttp
             </p>
             <p className={location.pathname === "/pathfinder" ? "project selected" : "project"} onClick={() => goTo("/pathfinder")}>
-              <FontAwesomeIcon icon={faCode}/> pathfinder
+              <FontAwesomeIcon icon={faCode}/> dijkstrafinder
             </p>
           </React.Fragment>
         : null
