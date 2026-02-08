@@ -1,4 +1,6 @@
 [
+{"hash":"23fdcc541a97d6687c99d567373285e226b3b3bf","author":"mrpiggy97","date":"2026-02-08 17:44:40 +0000","message":"changes name of project"},
+{"hash":"be0c958d501b6211261ff0ca78674885ba85c499","author":"mrpiggy97","date":"2026-02-08 17:44:28 +0000","message":"Adds gitlogs fro projects"},
 {"hash":"f6603399fbe84b55a3ce0a094936dd4f8c6bdbd1","author":"mrpiggy97","date":"2026-02-08 17:21:51 +0000","message":"Changes imageURL prop"},
 {"hash":"6d1d83841021762e66c1c666dc3f7000fef3e393","author":"mrpiggy97","date":"2026-02-08 17:21:36 +0000","message":"Adds git logs for porfolio"},
 {"hash":"fcd5849754fb903080cdb2b64b56c8db4b750aa4","author":"mrpiggy97","date":"2026-02-08 04:34:05 +0000","message":"Adds Project component to render information about piggyhttp project"},
