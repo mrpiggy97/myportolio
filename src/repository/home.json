@@ -1,5 +1,9 @@
 [
+{"hash":"56cf4fd2858202f4c1f3257ce92b3893bc9b505d","author":"mrpiggy97","date":"2026-02-08 18:04:14 +0000","message":"Merge branch 'editor-inspired' Solves merging conflict"},
+{"hash":"bd6f57ba6697634733e4bf3e1f4baaadd4e96993","author":"mrpiggy97","date":"2026-02-08 17:59:51 +0000","message":"updates git log for home page"},
 {"hash":"2bbe309f5ae53cc109b8549342865fce66895784","author":"mrpiggy97","date":"2026-02-08 17:59:30 +0000","message":"removes unused code, removes vite logo"},
+{"hash":"7ca5847bed5de600187a79936cbedd651865a713","author":"fabianjrivas","date":"2026-02-08 13:53:45 -0400","message":"Merge pull request #1 from mrpiggy97/editor-inspired"},
+{"hash":"b902d9cc49ddfe9de0fb8195a23a8717f031e76b","author":"fabianjrivas","date":"2026-02-08 13:49:59 -0400","message":"Merge branch 'main' into editor-inspired"},
 {"hash":"789ce68dde0bcfee125b20c6d1707926e5aeca57","author":"mrpiggy97","date":"2026-02-08 17:46:04 +0000","message":"updates home log"},
 {"hash":"23fdcc541a97d6687c99d567373285e226b3b3bf","author":"mrpiggy97","date":"2026-02-08 17:44:40 +0000","message":"changes name of project"},
 {"hash":"be0c958d501b6211261ff0ca78674885ba85c499","author":"mrpiggy97","date":"2026-02-08 17:44:28 +0000","message":"Adds gitlogs fro projects"},
@@ -35,6 +39,7 @@
 {"hash":"5a3bfd28b5b30c1ec19a6e86675e01af38a5ac80","author":"mrpiggy97","date":"2026-02-03 06:01:16 +0000","message":"Adusts width of menu"},
 {"hash":"1970d902f35dea4458729a586810d2fbd1021d3c","author":"mrpiggy97","date":"2026-02-03 05:58:43 +0000","message":"added links"},
 {"hash":"bfe34eb04b732397c917d4f2bdc84a2bfdc5cdd7","author":"mrpiggy97","date":"2026-02-03 04:47:32 +0000","message":"Adds new layout and packages for refresh of portfolio"},
+{"hash":"e15962387b4748c7c6909d42a5bd2d29751e07fe","author":"mrpiggy97","date":"2023-07-30 16:42:42 +0000","message":"fixed position of div"},
 {"hash":"4b68493419b13ed709ed76eee0a1823d78c06204","author":"mrpiggy97","date":"2023-07-29 18:47:20 +0000","message":"finished spacing objects"},
 {"hash":"ce0d1563924c4ec1a99a237d48f2e0f35be35224","author":"mrpiggy97","date":"2023-07-29 16:39:26 +0000","message":"fixed responsiveness bug, added new script"},
 {"hash":"9fa647e56e86d3a77bf28e0044c58fce22622d15","author":"mrpiggy97","date":"2023-07-27 18:50:23 +0000","message":"deleted unused import"},
