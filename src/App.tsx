@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGitAlt, faGithub, faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import './App.css'
-import { faArrowDown, faArrowRight, faCode, faDatabase, faHandshake, faHSquare, faList,faPiggyBank,faSearch} from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown, faArrowRight, faCode, faHandshake, faHSquare, faList,faSearch} from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
 import {Routes, Route, useNavigate, useLocation} from "react-router"
 import Home from './views/Home'
